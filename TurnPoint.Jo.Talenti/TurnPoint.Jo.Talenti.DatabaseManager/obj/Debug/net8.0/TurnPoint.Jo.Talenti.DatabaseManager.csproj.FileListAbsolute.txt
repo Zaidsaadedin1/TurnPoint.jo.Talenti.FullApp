@@ -1,0 +1,5 @@
+C:\Projects\Priv\TurnPoint.Jo.Talenti\TurnPoint.Jo.Talenti.DatabaseManager\obj\Debug\net8.0\TurnPoint.Jo.Talenti.DatabaseManager.csproj.AssemblyReference.cache
+C:\Projects\Priv\TurnPoint.Jo.Talenti\TurnPoint.Jo.Talenti.DatabaseManager\obj\Debug\net8.0\TurnPoint.Jo.Talenti.DatabaseManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Priv\TurnPoint.Jo.Talenti\TurnPoint.Jo.Talenti.DatabaseManager\obj\Debug\net8.0\TurnPoint.Jo.Talenti.DatabaseManager.AssemblyInfoInputs.cache
+C:\Projects\Priv\TurnPoint.Jo.Talenti\TurnPoint.Jo.Talenti.DatabaseManager\obj\Debug\net8.0\TurnPoint.Jo.Talenti.DatabaseManager.AssemblyInfo.cs
+C:\Projects\Priv\TurnPoint.Jo.Talenti\TurnPoint.Jo.Talenti.DatabaseManager\obj\Debug\net8.0\TurnPoint.Jo.Talenti.DatabaseManager.csproj.CoreCompileInputs.cache

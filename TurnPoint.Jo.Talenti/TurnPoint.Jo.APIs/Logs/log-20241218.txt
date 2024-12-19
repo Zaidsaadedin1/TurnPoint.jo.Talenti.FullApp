@@ -1,0 +1,343 @@
+2024-12-18 18:49:09.682 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-18 18:49:10.006 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-18 18:49:10.012 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-18 18:49:10.013 +03:00 [INF] Hosting environment: Development
+2024-12-18 18:49:10.013 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-18 18:49:12.747 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-18 18:49:13.701 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 964.9435ms
+2024-12-18 18:49:13.763 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-18 18:49:13.769 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.2234ms
+2024-12-18 18:49:13.783 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-18 18:49:14.409 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 626.6611ms
+2024-12-18 18:49:14.506 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-18 18:49:14.941 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 434.9495ms
+2024-12-18 21:38:13.994 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-18 21:38:14.459 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-18 21:38:14.464 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-18 21:38:14.465 +03:00 [INF] Hosting environment: Development
+2024-12-18 21:38:14.465 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-18 21:38:15.442 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-18 21:38:16.097 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 667.4693ms
+2024-12-18 21:38:16.195 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-18 21:38:16.200 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.5531ms
+2024-12-18 21:38:16.316 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-18 21:38:16.400 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.389ms
+2024-12-18 21:38:16.799 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-18 21:38:17.118 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 319.0613ms
+2024-12-18 21:42:37.354 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5148/api/Authentication/Register - null null
+2024-12-18 21:42:37.420 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-18 21:42:37.447 +03:00 [INF] CORS policy execution successful.
+2024-12-18 21:42:37.451 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5148/api/Authentication/Register - 204 null null 106.0487ms
+2024-12-18 21:42:37.455 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 165
+2024-12-18 21:42:37.464 +03:00 [INF] CORS policy execution successful.
+2024-12-18 21:42:37.509 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-18 21:42:37.578 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-18 21:42:43.202 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 5608.6606ms
+2024-12-18 21:42:43.209 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-18 21:42:43.221 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at TurnPoint.Jo.APIs.Validators.AuthenticationValidators.RegisterUserDtoValidator.<>c.<.ctor>b__0_9(Nullable`1 dob) in C:\Projects\Priv\Talenti\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\Validators\AuthenticationValidators\RegisterUserDtoValidator.cs:line 48
+   at FluentValidation.DefaultValidatorExtensions.<>c__DisplayClass27_0`2.<Must>b__0(T x, TProperty val) in /_/src/FluentValidation/DefaultValidatorExtensions.cs:line 421
+   at FluentValidation.DefaultValidatorExtensions.<>c__DisplayClass28_0`2.<Must>b__0(T x, TProperty val, ValidationContext`1 _) in /_/src/FluentValidation/DefaultValidatorExtensions.cs:line 437
+   at FluentValidation.DefaultValidatorExtensions.<>c__DisplayClass29_0`2.<Must>b__0(T instance, TProperty property, ValidationContext`1 propertyValidatorContext) in /_/src/FluentValidation/DefaultValidatorExtensions.cs:line 453
+   at FluentValidation.Validators.PredicateValidator`2.IsValid(ValidationContext`1 context, TProperty value) in /_/src/FluentValidation/Validators/PredicateValidator.cs:line 37
+   at FluentValidation.Internal.RuleComponent`2.InvokePropertyValidator(ValidationContext`1 context, TProperty value) in /_/src/FluentValidation/Internal/RuleComponent.cs:line 92
+   at FluentValidation.Internal.RuleComponent`2.ValidateAsync(ValidationContext`1 context, TProperty value, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/Internal/RuleComponent.cs:line 83
+   at FluentValidation.Internal.PropertyRule`2.ValidateAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/Internal/PropertyRule.cs:line 143
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 241
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /_/src/FluentValidation/AbstractValidator.cs:line 202
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(IValidationContext context) in /_/src/FluentValidation/AbstractValidator.cs:line 153
+   at FluentValidation.AspNetCore.FluentValidationModelValidator.Validate(ModelValidationContext mvContext) in /_/src/FluentValidation.AspNetCore/FluentValidationModelValidatorProvider.cs:line 146
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at FluentValidation.AspNetCore.FluentValidationVisitor.<>n__1(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel, Object container)
+   at FluentValidation.AspNetCore.FluentValidationVisitor.<>c__DisplayClass2_0.<Validate>g__BaseValidate|0() in /_/src/FluentValidation.AspNetCore/FluentValidationVisitor.cs:line 45
+   at FluentValidation.AspNetCore.FluentValidationVisitor.ValidateInternal(ModelMetadata metadata, String key, Object model, Func`1 continuation) in /_/src/FluentValidation.AspNetCore/FluentValidationVisitor.cs:line 63
+   at FluentValidation.AspNetCore.FluentValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel, Object container) in /_/src/FluentValidation.AspNetCore/FluentValidationVisitor.cs:line 47
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-18 21:42:43.392 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 500 null text/plain; charset=utf-8 5936.884ms
+2024-12-18 21:43:45.721 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Authentication/Register - null null
+2024-12-18 21:43:45.774 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-12-18 21:43:45.774 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-12-18 21:43:45.775 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Authentication/Register - 405 0 null 53.9922ms
+2024-12-18 22:47:44.937 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:47:44.943 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:47:44.960 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:47:48.241 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:47:48.244 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:47:48.245 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:47:50.256 +03:00 [INF] Executed DbCommand (159ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:47:50.256 +03:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:47:50.555 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:47:50.556 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:47:50.616 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 5655.3577ms
+2024-12-18 22:47:50.616 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 2370.8131ms
+2024-12-18 22:47:50.617 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:47:50.618 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:47:50.637 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 5708.8787ms
+2024-12-18 22:47:50.638 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 2396.224ms
+2024-12-18 22:48:02.899 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:48:02.902 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:48:02.903 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:48:03.104 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:48:03.106 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:48:03.108 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 205.0848ms
+2024-12-18 22:48:03.108 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:48:03.110 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 210.8405ms
+2024-12-18 22:49:49.871 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:49:49.874 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:49:49.879 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:49:49.879 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:49:49.879 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:49:49.879 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:49:49.906 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:49:49.906 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:49:49.914 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:49:49.916 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:49:49.916 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 36.8133ms
+2024-12-18 22:49:49.916 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 36.8855ms
+2024-12-18 22:49:49.916 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:49:49.917 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:49:49.917 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 46.335ms
+2024-12-18 22:49:49.917 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 45.2223ms
+2024-12-18 22:51:26.204 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:51:26.206 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:26.207 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:51:26.244 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:51:26.246 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:51:26.248 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 39.9766ms
+2024-12-18 22:51:26.249 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:26.261 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 47.4746ms
+2024-12-18 22:51:28.191 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:51:28.192 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:28.192 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:51:28.242 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:51:28.259 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:51:28.266 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 73.4182ms
+2024-12-18 22:51:28.276 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:28.280 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 88.5731ms
+2024-12-18 22:51:29.928 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:51:29.929 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:29.930 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:51:29.939 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:51:29.941 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:51:29.941 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 11.3666ms
+2024-12-18 22:51:29.941 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:29.942 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 13.6555ms
+2024-12-18 22:51:59.066 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:51:59.072 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:59.074 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:51:59.079 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:51:59.081 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:51:59.081 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 6.8565ms
+2024-12-18 22:51:59.081 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:51:59.081 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 15.4833ms
+2024-12-18 22:53:33.480 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:53:33.486 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:53:33.489 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:53:33.494 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:53:33.494 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:53:33.495 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 6.2846ms
+2024-12-18 22:53:33.495 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:53:33.495 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 14.977ms
+2024-12-18 22:56:17.558 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:56:17.559 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:56:17.570 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:56:17.624 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:56:17.636 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:56:17.638 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 68.4158ms
+2024-12-18 22:56:17.639 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:56:17.639 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 81.4143ms
+2024-12-18 22:56:19.097 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 22:56:19.097 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:56:19.098 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 22:56:19.106 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 22:56:19.108 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 22:56:19.108 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 10.2269ms
+2024-12-18 22:56:19.108 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 22:56:19.108 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 11.694ms
+2024-12-18 23:03:34.601 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:03:34.611 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:03:34.612 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:03:35.243 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:03:35.244 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:03:35.266 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:03:35.986 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:03:35.990 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:03:35.990 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 724.4983ms
+2024-12-18 23:03:35.991 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:03:35.991 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 748.3305ms
+2024-12-18 23:03:36.425 +03:00 [INF] Executed DbCommand (517ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:03:36.426 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:03:36.427 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 1814.219ms
+2024-12-18 23:03:36.427 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:03:36.427 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 1826.6397ms
+2024-12-18 23:04:03.210 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:04:03.215 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:04:03.215 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:04:03.221 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:04:03.222 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:04:03.222 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 5.0763ms
+2024-12-18 23:04:03.222 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:04:03.222 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 11.996ms
+2024-12-18 23:05:01.312 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:05:01.313 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:05:01.313 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:05:14.337 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:05:25.249 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:05:33.473 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 32159.9621ms
+2024-12-18 23:05:33.473 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:05:33.474 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 32161.5042ms
+2024-12-18 23:06:40.048 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:06:40.050 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:06:40.122 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:07:06.622 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:07:06.645 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:07:06.654 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:07:06.654 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:07:06.656 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:07:10.946 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:07:10.949 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:07:10.951 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 4294.8289ms
+2024-12-18 23:07:10.951 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 30829.5748ms
+2024-12-18 23:07:10.952 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:07:10.952 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:07:10.952 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 4329.7233ms
+2024-12-18 23:07:10.952 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 30904.3008ms
+2024-12-18 23:07:37.008 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:07:37.009 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:07:37.035 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:07:39.908 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:07:39.919 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:07:39.922 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 2886.5412ms
+2024-12-18 23:07:39.922 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:07:39.923 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 2914.6697ms
+2024-12-18 23:07:43.954 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:07:43.955 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:07:43.955 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:07:51.237 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:09:17.798 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-18 23:09:18.119 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-18 23:09:18.124 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-18 23:09:18.125 +03:00 [INF] Hosting environment: Development
+2024-12-18 23:09:18.125 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-18 23:09:19.646 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-18 23:09:20.833 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 1210.3826ms
+2024-12-18 23:09:20.891 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-18 23:09:20.896 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.6685ms
+2024-12-18 23:09:20.942 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-18 23:09:21.109 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 166.8443ms
+2024-12-18 23:09:21.220 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-18 23:09:21.600 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 380.0268ms
+2024-12-18 23:14:48.632 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:14:48.639 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-18 23:14:48.653 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:14:48.680 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:14:53.263 +03:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:14:53.408 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:14:53.446 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 4761.6818ms
+2024-12-18 23:14:53.447 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:14:53.460 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 4828.1997ms
+2024-12-18 23:15:06.471 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:15:06.481 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:15:06.482 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:16:18.309 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:16:18.324 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:16:18.329 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:16:18.716 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:16:18.718 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:16:18.719 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 72236.6423ms
+2024-12-18 23:16:18.719 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:16:18.719 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 72248.6871ms
+2024-12-18 23:16:18.727 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:16:18.729 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:16:18.730 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 396.243ms
+2024-12-18 23:16:18.730 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:16:18.730 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 422.6282ms
+2024-12-18 23:19:54.052 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-18 23:19:54.562 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-18 23:19:54.568 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-18 23:19:54.570 +03:00 [INF] Hosting environment: Development
+2024-12-18 23:19:54.570 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-18 23:19:55.803 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-18 23:19:56.564 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 793.2377ms
+2024-12-18 23:19:56.622 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-18 23:19:56.631 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 11.345ms
+2024-12-18 23:19:56.663 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-18 23:19:56.745 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.7946ms
+2024-12-18 23:19:56.871 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-18 23:19:57.206 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 334.3973ms
+2024-12-18 23:20:05.701 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-18 23:20:05.708 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-18 23:20:05.728 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:20:05.760 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-18 23:20:12.837 +03:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-18 23:21:02.415 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Entities.InterestsLookup, TurnPoint.Jo.Talenti.SharedModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-18 23:21:02.454 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 56688.8595ms
+2024-12-18 23:21:02.455 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-18 23:21:02.470 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 56768.7552ms

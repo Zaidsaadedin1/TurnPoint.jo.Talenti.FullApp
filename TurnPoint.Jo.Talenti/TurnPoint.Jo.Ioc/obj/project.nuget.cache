@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "5Y1H2LZHjjzrbT2xu23vdTB1lZxhgIRGAbs92LqPB4WGmOaZBwBDHL1dt3qb7y6bjWsuctdZ8ryiWi2QhvwTuA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Priv\\TurnPoint.Jo.Talenti\\TurnPoint.Jo.Ioc\\TurnPoint.Jo.Ioc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\z.saad\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",
+    "C:\\Users\\z.saad\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.0\\microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\z.saad\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\z.saad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\z.saad\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0\\microsoft.extensions.primitives.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
