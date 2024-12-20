@@ -10,6 +10,7 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { apis } from "@/backend-apis";
+import { GetInterestDto } from "../../../../backend-apis/apiTypes/InterestDtos/InterestDtos";
 
 const UserForm = ({
   isDrawerOpen,

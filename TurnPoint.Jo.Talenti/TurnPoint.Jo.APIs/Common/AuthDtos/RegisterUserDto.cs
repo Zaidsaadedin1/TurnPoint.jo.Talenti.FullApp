@@ -10,7 +10,5 @@
         public string Password { get; set; } = null!;
         public string Gender { get; set; } = null!;
         public DateTime? DateOfBirth { get; set; } = null!;
-        public List<int> InterestIds { get; set; } = null!;
     }
-
 }

@@ -72,7 +72,7 @@ namespace TurnPoint.Jo.APIs.Services
                 _logger.LogWarning("Login failed for email/phone: {EmailOrPhone}. User not found.", loginUserDto.EmailOrPhone);
                 return null;
             }
-            else if (user.EmailConfirmed || user.PhoneNumberConfirmed == false)
+            else if (user.EmailConfirmed && user.PhoneNumberConfirmed == false)
             {
                 _logger.LogWarning("Login failed for email/phone: {EmailOrPhone}. User not found.", loginUserDto.EmailOrPhone);
                 return null;
@@ -116,11 +116,11 @@ namespace TurnPoint.Jo.APIs.Services
         private async Task<string> GenerateJwtToken(User user)
         {
             var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, user.UserName),
-        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-        new Claim(ClaimTypes.Email, user.Email)
-    };
+            {
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email)
+            };
 
             var roles = await _userManager.GetRolesAsync(user);
             foreach (var role in roles)

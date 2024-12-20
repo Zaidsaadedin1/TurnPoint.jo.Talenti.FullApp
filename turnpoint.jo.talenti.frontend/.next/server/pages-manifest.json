@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/users-table": "pages/users-table.js",
+  "/homePage": "pages/homePage.js",
   "/login": "pages/login.js",
-  "/register": "pages/register.js",
-  "/homePage": "pages/homePage.js"
+  "/users-table": "pages/users-table.js"
 }

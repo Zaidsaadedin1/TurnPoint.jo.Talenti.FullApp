@@ -11,19 +11,12 @@ export const getServerSideProps = async () => {
     const allInterests: GetInterestDto[] =
       await apis.interestsApi.getAllInterests();
 
-    const interests = allInterests?.data || [];
-
-    const transformedInterests = Array.isArray(interests)
-      ? interests.map((interest) => ({
-          value: String(interest.id),
-          label: interest.name,
-        }))
-      : [];
+    const allUserInterests = allInterests?.data || [];
 
     return {
       props: {
         users: allUsers,
-        interests: transformedInterests,
+        interests: allUserInterests,
       },
     };
   } catch (error) {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TurnPoint.Jo.APIs.Common.AuthDtos;
+using TurnPoint.Jo.APIs.Common.Shared;
 using TurnPoint.Jo.APIs.Interfaceses;
 
 namespace TurnPoint.Jo.APIs.Controllers
@@ -18,68 +19,113 @@ namespace TurnPoint.Jo.APIs.Controllers
 
         [AllowAnonymous]
         [HttpPost("Register")]
-        public async Task<IActionResult> Register([FromBody] RegisterUserDto registerUserDto)
+        public async Task<ActionResult<GenericResponse<bool>>> Register([FromBody] RegisterUserDto registerUserDto)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Invalid registration details."
+                });
             }
 
             if (registerUserDto == null)
             {
-                return BadRequest("Invalid registration details.");
+                return BadRequest(new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Invalid registration details."
+                });
             }
 
             var registered = await _authService.RegisterUserAsync(registerUserDto);
             if (!registered)
             {
-                return BadRequest("Failed to register new user.");
+                return BadRequest(new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Failed to register new user."
+                });
             }
-            return Ok("User Registered Successfully");
+
+            return Ok(new GenericResponse<bool>
+            {
+                Success = true,
+                Message = "User registered successfully.",
+                Data = true
+            });
         }
 
         [AllowAnonymous]
         [HttpPost("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginUserDto loginDto)
+        public async Task<ActionResult<GenericResponse<string>>> Login([FromBody] LoginUserDto loginDto)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new GenericResponse<string>
+                {
+                    Success = false,
+                    Message = "Invalid login details."
+                });
             }
+
             if (loginDto == null)
             {
-                return BadRequest("Invalid login details.");
+                return BadRequest(new GenericResponse<string>
+                {
+                    Success = false,
+                    Message = "Invalid login details."
+                });
             }
 
             var token = await _authService.LoginUserAsync(loginDto);
             if (token == null)
             {
-                return BadRequest("Failed to login.");
+                return BadRequest(new GenericResponse<string>
+                {
+                    Success = false,
+                    Message = "Failed to login."
+                });
             }
-            return Ok(new { Token = token, message = "User logged in successfully." });
+
+            return Ok(new GenericResponse<string>
+            {
+                Success = true,
+                Message = "User logged in successfully.",
+                Data = token
+            });
         }
 
         [AllowAnonymous]
         [HttpPost("ResetPassword")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
+        public async Task<ActionResult<GenericResponse<bool>>> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
-            }
-
-            if (resetPasswordDto == null || string.IsNullOrWhiteSpace(resetPasswordDto.EmailOrPhone))
-            {
-                return BadRequest("Invalid details.");
+                return BadRequest(new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Invalid details."
+                });
             }
 
             var result = await _authService.UserPasswordResetAsync(resetPasswordDto);
             if (!result)
             {
-                return BadRequest("Failed to initiate password reset.");
+                return BadRequest(new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Failed to initiate password reset."
+                });
             }
 
-            return Ok("OTP sent successfully to your email or phone.");
+            return Ok(new GenericResponse<bool>
+            {
+                Success = true,
+                Message = "OTP sent successfully to your email or phone.",
+                Data = true
+            });
         }
     }
 }

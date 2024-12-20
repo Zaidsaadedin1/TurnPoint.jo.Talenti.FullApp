@@ -1,0 +1,673 @@
+2024-12-20 00:25:58.096 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-20 00:25:58.644 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-20 00:25:58.649 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-20 00:25:58.651 +03:00 [INF] Hosting environment: Development
+2024-12-20 00:25:58.651 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-20 00:26:06.378 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-20 00:26:07.506 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 1155.7645ms
+2024-12-20 00:26:07.541 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 00:26:07.549 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.7852ms
+2024-12-20 00:26:07.633 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-20 00:26:07.890 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 257.1936ms
+2024-12-20 00:26:08.024 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-20 00:26:08.406 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 382.3467ms
+2024-12-20 00:55:32.227 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 00:55:32.268 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-20 00:55:32.297 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 00:55:32.347 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 00:55:35.265 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 00:55:35.349 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 00:55:35.374 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 3020.5814ms
+2024-12-20 00:55:35.375 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 00:55:35.389 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 3189.9741ms
+2024-12-20 00:56:49.998 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5148/api/Authentication/Register - null null
+2024-12-20 00:56:50.004 +03:00 [INF] CORS policy execution successful.
+2024-12-20 00:56:50.006 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5148/api/Authentication/Register - 204 null null 8.5346ms
+2024-12-20 00:56:50.008 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 232
+2024-12-20 00:56:50.013 +03:00 [INF] CORS policy execution successful.
+2024-12-20 00:56:50.013 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-20 00:56:50.024 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-20 00:56:58.223 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__emailOrPhone_0='?' (Size = 256), @__emailOrPhone_0_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__emailOrPhone_0 OR [a].[PhoneNumber] = @__emailOrPhone_0_1
+2024-12-20 00:56:58.225 +03:00 [WRN] User with email/phone xhyperdrive5@gmail.com not found.
+2024-12-20 00:56:58.313 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-20 00:56:58.551 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [DateOfBirth], [DeletedAt], [Email], [EmailConfirmed], [Gender], [LastName], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [Otp], [OtpExpiresAt], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2024-12-20 00:56:58.594 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32), @p28='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [InterestsLookupUsers] USING (
+VALUES (@p23, @p24, 0),
+(@p25, @p26, 1),
+(@p27, @p28, 2)) AS i ([InterestId], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([InterestId], [UserId])
+VALUES (i.[InterestId], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position;
+2024-12-20 00:56:58.626 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-20 00:56:58.644 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-20 00:56:58.646 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-20 00:56:58.656 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-20 00:56:58.690 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-20 00:56:58.694 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-20 00:56:58.707 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-20 00:56:58.739 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p25='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p26='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 256), @p15='?' (Size = 256), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000), @p22='?' (DbType = Boolean), @p23='?' (DbType = DateTime2), @p24='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [DateOfBirth] = @p5, [DeletedAt] = @p6, [Email] = @p7, [EmailConfirmed] = @p8, [Gender] = @p9, [LastName] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [Name] = @p13, [NormalizedEmail] = @p14, [NormalizedUserName] = @p15, [Otp] = @p16, [OtpExpiresAt] = @p17, [PasswordHash] = @p18, [PhoneNumber] = @p19, [PhoneNumberConfirmed] = @p20, [SecurityStamp] = @p21, [TwoFactorEnabled] = @p22, [UpdatedAt] = @p23, [UserName] = @p24
+OUTPUT 1
+WHERE [Id] = @p25 AND [ConcurrencyStamp] = @p26;
+2024-12-20 00:56:58.744 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-12-20 00:56:58.744 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 8720.0763ms
+2024-12-20 00:56:58.745 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-20 00:56:58.745 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null text/plain; charset=utf-8 8736.8984ms
+2024-12-20 00:59:18.040 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 00:59:18.048 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 00:59:18.055 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 00:59:18.087 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 00:59:18.230 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 00:59:18.233 +03:00 [INF] Retrieved 3 users.
+2024-12-20 00:59:18.353 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 00:59:18.354 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 00:59:18.359 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 00:59:18.360 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 00:59:18.362 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 00:59:18.363 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 00:59:18.364 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 00:59:18.382 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 326.4199ms
+2024-12-20 00:59:18.382 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 00:59:18.382 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 342.2202ms
+2024-12-20 00:59:18.391 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 00:59:18.393 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 00:59:18.394 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 00:59:18.400 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 00:59:18.401 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 00:59:18.401 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 7.2689ms
+2024-12-20 00:59:18.401 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 00:59:18.401 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 10.9306ms
+2024-12-20 01:01:07.893 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:01:07.903 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:07.908 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:07.908 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:01:07.908 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:07.908 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:07.918 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:01:07.919 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:01:07.929 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:01:07.932 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:07.933 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:07.934 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:01:07.946 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:01:07.947 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:07.947 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:07.953 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:01:07.988 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:01:07.989 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:01:08.055 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.061 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:01:08.076 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:01:08.076 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.077 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:01:08.080 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:01:08.080 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.081 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:01:08.081 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.082 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 173.3917ms
+2024-12-20 01:01:08.082 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.083 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 175.259ms
+2024-12-20 01:01:08.084 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.084 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:01:08.087 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.089 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:01:08.104 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:01:08.105 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.105 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:08.106 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:01:08.106 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.107 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:01:08.107 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.108 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 199.8996ms
+2024-12-20 01:01:08.108 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.108 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 215.7326ms
+2024-12-20 01:01:08.108 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:01:08.111 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:01:08.112 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:01:08.113 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.114 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:01:08.118 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:01:08.118 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:01:08.120 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.123 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 17.4377ms
+2024-12-20 01:01:08.123 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.123 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.124 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 19.1619ms
+2024-12-20 01:01:08.124 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:08.124 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.124 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:01:08.125 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.125 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:01:08.127 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.128 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:01:08.131 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.134 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:01:08.135 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.135 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:01:08.136 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.137 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 12.6831ms
+2024-12-20 01:01:08.137 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:01:08.137 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.137 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:01:08.137 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 20.0545ms
+2024-12-20 01:01:08.138 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.138 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 205.3657ms
+2024-12-20 01:01:08.138 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 191.1745ms
+2024-12-20 01:01:08.138 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.138 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.139 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 194.927ms
+2024-12-20 01:01:08.139 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 216.9046ms
+2024-12-20 01:01:08.350 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:01:08.350 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.351 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:08.359 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:01:08.359 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:01:08.360 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.360 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.360 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 9.5012ms
+2024-12-20 01:01:08.360 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:01:08.360 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.361 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 11.3216ms
+2024-12-20 01:01:08.370 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:01:08.371 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:01:08.372 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 11.3308ms
+2024-12-20 01:01:08.372 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:01:08.372 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 13.2924ms
+2024-12-20 01:03:48.268 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:03:48.269 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:03:48.270 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.270 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.277 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.277 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.314 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:03:48.315 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.315 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.326 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:03:48.326 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:03:48.326 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:03:48.379 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:03:48.380 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:03:48.381 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:03:48.381 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:03:48.381 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:03:48.381 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:03:48.386 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.386 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:03:48.396 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.396 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:03:48.400 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.401 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:03:48.414 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:03:48.414 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.415 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.416 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:03:48.431 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.444 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:03:48.455 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.455 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:03:48.455 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.458 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 141.073ms
+2024-12-20 01:03:48.459 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.460 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 145.4388ms
+2024-12-20 01:03:48.518 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:03:48.522 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.525 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.526 +03:00 [INF] Executed DbCommand (112ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.528 +03:00 [INF] Executed DbCommand (127ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.528 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:03:48.529 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:03:48.544 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:03:48.554 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:03:48.579 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.585 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:03:48.593 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.594 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 315.0604ms
+2024-12-20 01:03:48.595 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.595 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 325.9817ms
+2024-12-20 01:03:48.595 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.596 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:03:48.636 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.638 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:03:48.683 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.684 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:03:48.684 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.685 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 269.9378ms
+2024-12-20 01:03:48.685 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:03:48.685 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.685 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 273.6738ms
+2024-12-20 01:03:48.685 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.686 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.687 +03:00 [INF] Executed DbCommand (92ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:03:48.695 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:03:48.733 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.737 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:48.739 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:03:48.739 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.740 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 53.9361ms
+2024-12-20 01:03:48.740 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.740 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 55.4016ms
+2024-12-20 01:03:48.786 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.794 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:03:48.799 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.800 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 62.4955ms
+2024-12-20 01:03:48.800 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.801 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 105.0919ms
+2024-12-20 01:03:48.802 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 276.2559ms
+2024-12-20 01:03:48.802 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.802 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 285.0195ms
+2024-12-20 01:03:48.918 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:03:48.919 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:03:48.920 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:48.921 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 640.7921ms
+2024-12-20 01:03:48.921 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:48.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 665.5699ms
+2024-12-20 01:03:49.155 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:03:49.156 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:49.157 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:03:49.171 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:03:49.172 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:03:49.172 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 15.0898ms
+2024-12-20 01:03:49.173 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:03:49.173 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 18.715ms
+2024-12-20 01:08:00.898 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 01:08:00.902 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:08:00.902 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 01:08:00.903 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 01:08:00.910 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 01:08:00.911 +03:00 [INF] Retrieved 3 users.
+2024-12-20 01:08:00.912 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:08:00.913 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 01:08:00.914 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:08:00.914 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 01:08:00.915 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 01:08:00.915 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 01:08:00.915 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:08:00.916 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 13.6184ms
+2024-12-20 01:08:00.916 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 01:08:00.916 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 21.8261ms
+2024-12-20 01:08:00.920 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 01:08:00.921 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:08:00.921 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 01:08:00.925 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 01:08:00.925 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 01:08:00.925 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 4.5128ms
+2024-12-20 01:08:00.925 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 01:08:00.926 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 5.179ms
+2024-12-20 02:41:36.603 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 02:41:36.604 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 02:41:36.604 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 02:41:36.628 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 02:41:36.629 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 02:41:36.629 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 25.5103ms
+2024-12-20 02:41:36.629 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 02:41:36.630 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 26.6124ms
+2024-12-20 02:42:35.334 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 02:42:35.337 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 02:42:35.337 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 02:42:35.354 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 02:42:35.355 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 02:42:35.355 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 18.2688ms
+2024-12-20 02:42:35.355 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 02:42:35.356 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 30.9941ms
+2024-12-20 02:44:09.854 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5148/api/Authentication/Register - null null
+2024-12-20 02:44:09.860 +03:00 [INF] CORS policy execution successful.
+2024-12-20 02:44:09.863 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5148/api/Authentication/Register - 204 null null 9.114ms
+2024-12-20 02:44:09.865 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 230
+2024-12-20 02:44:09.865 +03:00 [INF] CORS policy execution successful.
+2024-12-20 02:44:09.865 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-20 02:44:09.865 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-20 02:44:15.113 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__emailOrPhone_0='?' (Size = 256), @__emailOrPhone_0_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__emailOrPhone_0 OR [a].[PhoneNumber] = @__emailOrPhone_0_1
+2024-12-20 02:44:15.114 +03:00 [INF] User with email/phone zaidsaadedin10@gmail.com found.
+2024-12-20 02:44:15.120 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 02:44:15.120 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 02:44:16.281 +03:00 [WRN] Email zaidsaadedin10@gmail.com is already taken.
+2024-12-20 02:44:32.015 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-12-20 02:44:32.016 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 22150.5676ms
+2024-12-20 02:44:32.016 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-20 02:44:32.016 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null text/plain; charset=utf-8 22151.5511ms
+2024-12-20 02:53:02.405 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-20 02:53:03.119 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-20 02:53:03.147 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-20 02:53:03.149 +03:00 [INF] Hosting environment: Development
+2024-12-20 02:53:03.149 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-20 02:53:06.215 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-20 02:53:07.420 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 1243.121ms
+2024-12-20 02:53:07.444 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:53:07.465 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 22.6503ms
+2024-12-20 02:53:07.535 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-20 02:53:07.729 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 193.4098ms
+2024-12-20 02:53:07.863 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-20 02:53:08.501 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 637.8895ms
+2024-12-20 03:31:32.615 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 03:31:32.636 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-20 03:31:32.666 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:32.723 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 03:31:33.333 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 03:31:36.018 +03:00 [INF] Executed DbCommand (104ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 03:31:36.261 +03:00 [INF] Retrieved 3 users.
+2024-12-20 03:31:36.644 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:36.647 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 03:31:36.657 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:36.657 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 03:31:36.660 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:36.661 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 03:31:36.678 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 03:31:36.723 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 3994.3041ms
+2024-12-20 03:31:36.724 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:36.741 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 4126.0671ms
+2024-12-20 03:31:36.742 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 03:31:36.747 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:36.755 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 03:31:36.928 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 03:31:36.930 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 03:31:36.931 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 175.684ms
+2024-12-20 03:31:36.931 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:36.932 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 190.2253ms
+2024-12-20 03:31:54.814 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 03:31:54.814 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-20 03:31:54.824 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:54.824 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:54.825 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 03:31:54.825 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-20 03:31:54.840 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 03:31:54.840 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-20 03:31:54.975 +03:00 [INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 03:31:55.016 +03:00 [INF] Retrieved 3 users.
+2024-12-20 03:31:55.054 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:55.055 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 03:31:55.071 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:55.071 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 03:31:55.084 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:55.084 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 03:31:55.104 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 03:31:55.105 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 279.4326ms
+2024-12-20 03:31:55.105 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:55.105 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 291.6692ms
+2024-12-20 03:31:55.111 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-20 03:31:55.118 +03:00 [INF] Retrieved 3 users.
+2024-12-20 03:31:55.118 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 03:31:55.124 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:55.125 +03:00 [INF] Retrieved 0 interests for user with ID 1.
+2024-12-20 03:31:55.125 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:55.126 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 03:31:55.129 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:55.135 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-20 03:31:55.138 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-20 03:31:55.143 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-20 03:31:55.143 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 03:31:55.143 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 03:31:55.144 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 03:31:55.144 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 18.1469ms
+2024-12-20 03:31:55.144 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 318.8415ms
+2024-12-20 03:31:55.144 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:55.144 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:55.144 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 26.0847ms
+2024-12-20 03:31:55.144 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profiles/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 330.8715ms
+2024-12-20 03:31:55.255 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - null null
+2024-12-20 03:31:55.256 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:55.256 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-20 03:31:55.278 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-20 03:31:55.279 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 03:31:55.279 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 23.0733ms
+2024-12-20 03:31:55.280 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-20 03:31:55.281 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/interests/GetAllInterestsAsync - 200 null application/json; charset=utf-8 25.907ms
