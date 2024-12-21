@@ -19,42 +19,25 @@ namespace TurnPoint.Jo.APIs.Controllers
 
         [AllowAnonymous]
         [HttpPost("Register")]
-        public async Task<ActionResult<GenericResponse<bool>>> Register([FromBody] RegisterUserDto registerUserDto)
+        public async Task<ActionResult<GenericResponse<RegisterUserDto>>> Register([FromBody] RegisterUserDto registerUserDto)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(new GenericResponse<bool>
+                return BadRequest(new GenericResponse<RegisterUserDto>
                 {
                     Success = false,
-                    Message = "Invalid registration details."
+                    Message = "Invalid registration details. Something is missing.",
+                    Data = null
                 });
             }
 
-            if (registerUserDto == null)
+            var response = await _authService.RegisterUserAsync(registerUserDto);
+            if (!response.Success)
             {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Invalid registration details."
-                });
+                return BadRequest(response);
             }
 
-            var registered = await _authService.RegisterUserAsync(registerUserDto);
-            if (!registered)
-            {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to register new user."
-                });
-            }
-
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "User registered successfully.",
-                Data = true
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
@@ -70,31 +53,13 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
-            if (loginDto == null)
+            var response = await _authService.LoginUserAsync(loginDto);
+            if (!response.Success)
             {
-                return BadRequest(new GenericResponse<string>
-                {
-                    Success = false,
-                    Message = "Invalid login details."
-                });
+                return BadRequest(response);
             }
 
-            var token = await _authService.LoginUserAsync(loginDto);
-            if (token == null)
-            {
-                return BadRequest(new GenericResponse<string>
-                {
-                    Success = false,
-                    Message = "Failed to login."
-                });
-            }
-
-            return Ok(new GenericResponse<string>
-            {
-                Success = true,
-                Message = "User logged in successfully.",
-                Data = token
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
@@ -110,22 +75,13 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
-            var result = await _authService.UserPasswordResetAsync(resetPasswordDto);
-            if (!result)
+            var response = await _authService.UserPasswordResetAsync(resetPasswordDto);
+            if (!response.Success)
             {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to initiate password reset."
-                });
+                return BadRequest(response);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "OTP sent successfully to your email or phone.",
-                Data = true
-            });
+            return Ok(response);
         }
     }
 }

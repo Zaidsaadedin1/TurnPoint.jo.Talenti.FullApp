@@ -6,8 +6,8 @@ using TurnPoint.Jo.APIs.Common.InterestDtos;
 
 namespace TurnPoint.Jo.APIs.Controllers
 {
-    [Route("api/interests")]
     [ApiController]
+    [Route("api/[controller]")]
     public class InterestsController : ControllerBase
     {
         private readonly IInterestsService _interestsService;
@@ -18,44 +18,35 @@ namespace TurnPoint.Jo.APIs.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("GetAllInterestsAsync")]
+        [HttpGet("GetAllInterests")]
         public async Task<ActionResult<GenericResponse<IEnumerable<GetInterestDto>>>> GetAllInterestsAsync()
         {
-            var interests = await _interestsService.GetAllInterestsAsync();
-            return Ok(new GenericResponse<IEnumerable<GetInterestDto>>
+            var response = await _interestsService.GetAllInterestsAsync();
+            if (!response.Success)
             {
-                Success = true,
-                Message = "Retrieved all interests successfully.",
-                Data = interests
-            });
-        }
-
-        [HttpGet("GetInterestByIdAsync")]
-        public async Task<ActionResult<GenericResponse<GetInterestDto>>> GetInterestByIdAsync([FromQuery] int interestId)
-        {
-            var interest = await _interestsService.GetInterestByIdAsync(interestId);
-            if (interest == null)
-            {
-                return NotFound(new GenericResponse<GetInterestDto>
-                {
-                    Success = false,
-                    Message = $"Interest with ID {interestId} not found."
-                });
+                return BadRequest(response);
             }
 
-            return Ok(new GenericResponse<GetInterestDto>
+            return Ok(response);
+        }
+
+        [HttpGet("GetInterestById")]
+        public async Task<ActionResult<GenericResponse<GetInterestDto>>> GetInterestByIdAsync([FromQuery] int interestId)
+        {
+            var response = await _interestsService.GetInterestByIdAsync(interestId);
+            if (!response.Success)
             {
-                Success = true,
-                Message = "Interest retrieved successfully.",
-                Data = interest
-            });
+                return NotFound(response);
+            }
+
+            return Ok(response);
         }
 
         [AllowAnonymous]
-        [HttpPost("AddInterestAsync")]
+        [HttpPost("AddInterest")]
         public async Task<ActionResult<GenericResponse<bool>>> AddInterestAsync([FromBody] string newInterest)
         {
-            if (string.IsNullOrEmpty(newInterest))
+            if (string.IsNullOrWhiteSpace(newInterest))
             {
                 return BadRequest(new GenericResponse<bool>
                 {
@@ -64,72 +55,57 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
-            var result = await _interestsService.AddInterestAsync(newInterest);
-            if (!result)
+            var response = await _interestsService.AddInterestAsync(newInterest);
+            if (!response.Success)
             {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to add interest. It already exists."
-                });
+                return BadRequest(response);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "Interest added successfully."
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
-        [HttpPut("UpdateInterestAsync")]
+        [HttpPut("UpdateInterest")]
         public async Task<ActionResult<GenericResponse<bool>>> UpdateInterestAsync([FromQuery] int interestId, [FromBody] string updatedInterestName)
         {
-            if (string.IsNullOrEmpty(updatedInterestName) || interestId < 1)
+            if (string.IsNullOrWhiteSpace(updatedInterestName) || interestId <= 0)
             {
                 return BadRequest(new GenericResponse<bool>
                 {
                     Success = false,
-                    Message = "Invalid interest data. New name or ID is null."
+                    Message = "Invalid interest data."
                 });
             }
 
-            var result = await _interestsService.UpdateInterestAsync(interestId, updatedInterestName);
-            if (!result)
+            var response = await _interestsService.UpdateInterestAsync(interestId, updatedInterestName);
+            if (!response.Success)
             {
-                return Conflict(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = $"Interest with ID {interestId} already exists or update failed."
-                });
+                return Conflict(response);
             }
 
-            return Ok(new GenericResponse<object>
-            {
-                Success = true,
-                Message = $"Interest with ID {interestId} updated successfully."
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
-        [HttpDelete("DeleteInterestAsync")]
+        [HttpDelete("DeleteInterest")]
         public async Task<ActionResult<GenericResponse<bool>>> DeleteInterestAsync([FromQuery] int interestId)
         {
-            var result = await _interestsService.DeleteInterestAsync(interestId);
-            if (!result)
+            if (interestId <= 0)
             {
-                return NotFound(new GenericResponse<bool>
+                return BadRequest(new GenericResponse<bool>
                 {
                     Success = false,
-                    Message = $"Interest with ID {interestId} not found."
+                    Message = "Invalid interest ID."
                 });
             }
 
-            return Ok(new GenericResponse<bool>
+            var response = await _interestsService.DeleteInterestAsync(interestId);
+            if (!response.Success)
             {
-                Success = true,
-                Message = $"Interest with ID {interestId} deleted successfully."
-            });
+                return NotFound(response);
+            }
+
+            return Ok(response);
         }
     }
 }

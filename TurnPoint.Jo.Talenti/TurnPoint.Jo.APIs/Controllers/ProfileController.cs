@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TurnPoint.Jo.APIs.Common.ProfileDtos;
-using TurnPoint.Jo.APIs.Interfaceses;
-using TurnPoint.Jo.APIs.Common.Shared;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using TurnPoint.Jo.APIs.Interfaceses;
+using TurnPoint.Jo.APIs.Common.ProfileDtos;
+using TurnPoint.Jo.APIs.Common.Shared;
 
 namespace TurnPoint.Jo.APIs.Controllers
 {
+    [Route("api/user")]
     [ApiController]
-    [Route("api/Profiles")]
     public class ProfileController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -15,8 +16,8 @@ namespace TurnPoint.Jo.APIs.Controllers
 
         public ProfileController(IUserService userService, ILogger<ProfileController> logger)
         {
-            _userService = userService ?? throw new ArgumentNullException(nameof(userService));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _userService = userService;
+            _logger = logger;
         }
 
         [AllowAnonymous]
@@ -25,24 +26,14 @@ namespace TurnPoint.Jo.APIs.Controllers
         {
             _logger.LogInformation("Fetching user with ID {UserId}.", userId);
 
-            var user = await _userService.GetUserByIdAsync(userId);
-            if (user == null)
+            var response = await _userService.GetUserByIdAsync(userId);
+            if (!response.Success)
             {
                 _logger.LogWarning("User with ID {UserId} not found.", userId);
-                return NotFound(new GenericResponse<GetUserDto>
-                {
-                    Success = false,
-                    Message = "User not found.",
-                    Data = null
-                });
+                return NotFound(response);
             }
 
-            return Ok(new GenericResponse<GetUserDto>
-            {
-                Success = true,
-                Message = "User retrieved successfully.",
-                Data = user
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
@@ -51,13 +42,19 @@ namespace TurnPoint.Jo.APIs.Controllers
         {
             _logger.LogInformation("Fetching users with pagination. Page: {Page}, PageSize: {PageSize}.", page, pageSize);
 
-            var users = await _userService.GetAllUsersAsync();
-            var pagedUsers = users.Skip((page - 1) * pageSize).Take(pageSize);
+            var response = await _userService.GetAllUsersAsync();
+            if (!response.Success)
+            {
+                _logger.LogWarning("Failed to fetch users.");
+                return BadRequest(response);
+            }
+
+            var pagedUsers = response.Data.Skip((page - 1) * pageSize).Take(pageSize);
 
             return Ok(new GenericResponse<IEnumerable<GetUserDto>>
             {
                 Success = true,
-                Message = "Users retrieved successfully.",
+                Message = response.Message,
                 Data = pagedUsers
             });
         }
@@ -68,24 +65,14 @@ namespace TurnPoint.Jo.APIs.Controllers
         {
             _logger.LogInformation("Updating user with ID {UserId}.", userId);
 
-            var success = await _userService.UpdateUserAsync(userId, userDto);
-            if (!success)
+            var response = await _userService.UpdateUserAsync(userId, userDto);
+            if (!response.Success)
             {
                 _logger.LogWarning("Failed to update user with ID {UserId}.", userId);
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to update user.",
-                    Data = false
-                });
+                return BadRequest(response);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "User updated successfully.",
-                Data = true
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
@@ -94,24 +81,14 @@ namespace TurnPoint.Jo.APIs.Controllers
         {
             _logger.LogInformation("Deleting user with ID {UserId}.", userId);
 
-            var success = await _userService.DeleteUserAsync(userId);
-            if (!success)
+            var response = await _userService.DeleteUserAsync(userId);
+            if (!response.Success)
             {
                 _logger.LogWarning("Failed to delete user with ID {UserId}.", userId);
-                return NotFound(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "User not found.",
-                    Data = false
-                });
+                return NotFound(response);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "User deleted successfully.",
-                Data = true
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
@@ -120,13 +97,8 @@ namespace TurnPoint.Jo.APIs.Controllers
         {
             _logger.LogInformation("Checking if email/phone {EmailOrPhone} is taken.", emailOrPhone);
 
-            var isTaken = await _userService.IsEmailOrPhoneUserTakenAsync(emailOrPhone);
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = isTaken ? "Email/phone is already taken." : "Email/phone is available.",
-                Data = isTaken
-            });
+            var response = await _userService.IsEmailOrPhoneUserTakenAsync(emailOrPhone);
+            return Ok(response);
         }
     }
 }

@@ -1,21 +1,27 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using TurnPoint.Jo.APIs.Interfaceses;
 using TurnPoint.Jo.APIs.Enums;
 using TurnPoint.Jo.APIs.Common.VerificationsDtos;
 using TurnPoint.Jo.APIs.Common.Shared;
+using TurnPoint.Jo.APIs.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace TurnPoint.Jo.APIs.Controllers
 {
+    [Route("api/otp")]
     [ApiController]
-    [Route("api/[controller]")]
     public class OtpController : ControllerBase
     {
         private readonly IOtpService _otpService;
+        private readonly ILogger<OtpController> _logger;
 
-        public OtpController(IOtpService otpService)
+        public OtpController(IOtpService otpService, ILogger<OtpController> logger)
         {
             _otpService = otpService;
+            _logger = logger;
         }
 
         [AllowAnonymous]
@@ -32,23 +38,17 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
+            _logger.LogInformation("Processing SendOtp request for {EmailOrPhone}", emailOrPhone);
+
             var result = await _otpService.SendOtpAsync(emailOrPhone);
-            if (!result)
+            if (!result.Success)
             {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to send OTP.",
-                    Data = false
-                });
+                _logger.LogWarning("Failed to send OTP for {EmailOrPhone}", emailOrPhone);
+                return BadRequest(result);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "OTP sent successfully.",
-                Data = true
-            });
+            _logger.LogInformation("OTP sent successfully to {EmailOrPhone}", emailOrPhone);
+            return Ok(result);
         }
 
         [AllowAnonymous]
@@ -65,46 +65,58 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
+            _logger.LogInformation("Processing VerifyOtp request for {EmailOrPhone}", verifyOtpDto.EmailOrPhone);
+
             var verificationResult = await _otpService.VerifyUserOtpAsync(verifyOtpDto);
-            return verificationResult switch
+            var response = verificationResult switch
             {
-                VerificationResult.UserNotFound => BadRequest(new GenericResponse<string>
+                VerificationResult.UserNotFound => new GenericResponse<string>
                 {
                     Success = false,
                     Message = "User not found.",
                     Data = null
-                }),
-                VerificationResult.OtpNotFound => BadRequest(new GenericResponse<string>
+                },
+                VerificationResult.OtpNotFound => new GenericResponse<string>
                 {
                     Success = false,
                     Message = "OTP not found.",
                     Data = null
-                }),
-                VerificationResult.OtpExpired => BadRequest(new GenericResponse<string>
+                },
+                VerificationResult.OtpExpired => new GenericResponse<string>
                 {
                     Success = false,
                     Message = "OTP expired.",
                     Data = null
-                }),
-                VerificationResult.InvalidOtp => BadRequest(new GenericResponse<string>
+                },
+                VerificationResult.InvalidOtp => new GenericResponse<string>
                 {
                     Success = false,
                     Message = "Invalid OTP.",
                     Data = null
-                }),
-                VerificationResult.Success => Ok(new GenericResponse<string>
+                },
+                VerificationResult.Success => new GenericResponse<string>
                 {
                     Success = true,
                     Message = "OTP verified successfully.",
                     Data = "Verified"
-                }),
-                _ => BadRequest(new GenericResponse<string>
+                },
+                _ => new GenericResponse<string>
                 {
                     Success = false,
                     Message = "An error occurred while verifying OTP.",
                     Data = null
-                }),
+                },
             };
+
+            if (!response.Success)
+            {
+                _logger.LogWarning("Failed to verify OTP for {EmailOrPhone}: {Message}", verifyOtpDto.EmailOrPhone, response.Message);
+                return BadRequest(response);
+            }
+
+            _logger.LogInformation("OTP verified successfully for {EmailOrPhone}", verifyOtpDto.EmailOrPhone);
+            return Ok(response);
         }
     }
+
 }

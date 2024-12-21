@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TurnPoint.Jo.APIs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1c62b26cb20a63a77071649ef651dacf620d7c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f3537b7cddbe6bb71fe5969350f780e52da684b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TurnPoint.Jo.APIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TurnPoint.Jo.APIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,14 +1,14 @@
 ﻿using TurnPoint.Jo.APIs.Common.InterestDtos;
-using TurnPoint.Jo.APIs.Entities;
+using TurnPoint.Jo.APIs.Common.Shared;
 
 namespace TurnPoint.Jo.APIs.Interfaceses
 {
     public interface IInterestsService
     {
-        Task<IEnumerable<GetInterestDto>> GetAllInterestsAsync();
-        Task<GetInterestDto?> GetInterestByIdAsync(int interestId);
-        Task<bool> AddInterestAsync(string interestName);
-        Task<bool> UpdateInterestAsync(int interestId, string updatedInterestName);
-        Task<bool> DeleteInterestAsync(int interestId);
+        Task<GenericResponse<IEnumerable<GetInterestDto>>> GetAllInterestsAsync();
+        Task<GenericResponse<GetInterestDto>> GetInterestByIdAsync(int interestId);
+        Task<GenericResponse<bool>> AddInterestAsync(string interestName);
+        Task<GenericResponse<bool>> UpdateInterestAsync(int interestId, string updatedInterestName);
+        Task<GenericResponse<bool>> DeleteInterestAsync(int interestId);
     }
 }

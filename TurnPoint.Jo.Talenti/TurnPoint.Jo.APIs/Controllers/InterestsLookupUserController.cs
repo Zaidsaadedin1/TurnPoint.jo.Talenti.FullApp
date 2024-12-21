@@ -21,7 +21,7 @@ namespace TurnPoint.Jo.APIs.Controllers
         [HttpPost("AddInterestsToUser")]
         public async Task<ActionResult<GenericResponse<bool>>> AddInterestsToUserAsync([FromQuery] int userId, [FromBody] List<int> newInterests)
         {
-            if (userId <= 0 || newInterests == null || newInterests.Count == 0)
+            if (userId <= 0 || newInterests == null || !newInterests.Any())
             {
                 return BadRequest(new GenericResponse<bool>
                 {
@@ -30,29 +30,20 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
-            var result = await _userInterestsService.AddInterestsToUserAsync(userId, newInterests);
-            if (!result)
+            var response = await _userInterestsService.AddInterestsToUserAsync(userId, newInterests);
+            if (!response.Success)
             {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to add interests."
-                });
+                return BadRequest(response);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "Interests added successfully.",
-                Data = result
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
         [HttpDelete("RemoveInterestsFromUser")]
         public async Task<ActionResult<GenericResponse<bool>>> RemoveInterestsFromUserAsync([FromQuery] int userId, [FromQuery] List<int> interestIds)
         {
-            if (userId <= 0 || interestIds == null || interestIds.Count == 0)
+            if (userId <= 0 || interestIds == null || !interestIds.Any())
             {
                 return BadRequest(new GenericResponse<bool>
                 {
@@ -61,22 +52,13 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
-            var result = await _userInterestsService.RemoveInterestsFromUserAsync(userId, interestIds);
-            if (!result)
+            var response = await _userInterestsService.RemoveInterestsFromUserAsync(userId, interestIds);
+            if (!response.Success)
             {
-                return BadRequest(new GenericResponse<bool>
-                {
-                    Success = false,
-                    Message = "Failed to remove interests."
-                });
+                return BadRequest(response);
             }
 
-            return Ok(new GenericResponse<bool>
-            {
-                Success = true,
-                Message = "Interests removed successfully.",
-                Data = result
-            });
+            return Ok(response);
         }
 
         [AllowAnonymous]
@@ -92,23 +74,13 @@ namespace TurnPoint.Jo.APIs.Controllers
                 });
             }
 
-            var interests = await _userInterestsService.GetUserInterestsAsync(userId);
-            if (interests == null || interests.Count == 0)
+            var response = await _userInterestsService.GetUserInterestsAsync(userId);
+            if (!response.Success)
             {
-                return NotFound(new GenericResponse<List<GetInterestDto>>
-                {
-                    Success = false,
-                    Message = "No interests found for this user.",
-                    Data = null
-                });
+                return NotFound(response);
             }
 
-            return Ok(new GenericResponse<List<GetInterestDto>>
-            {
-                Success = true,
-                Message = "User interests retrieved successfully.",
-                Data = interests
-            });
+            return Ok(response);
         }
     }
 }

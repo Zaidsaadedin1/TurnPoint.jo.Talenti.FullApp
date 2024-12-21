@@ -6,6 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TurnPoint.Jo.APIs.Common.AuthDtos;
+using TurnPoint.Jo.APIs.Common.Shared;
 using TurnPoint.Jo.APIs.Entities;
 using TurnPoint.Jo.APIs.Interfaceses;
 
@@ -22,13 +23,13 @@ namespace TurnPoint.Jo.APIs.Services
         private readonly RoleManager<Role> _roleManager;
 
         public AuthService(
-     IMapper mapper,
-     IConfiguration configuration,
-     IPasswordHasher<User> passwordHasher,
-     ILogger<AuthService> logger,
-     UserManager<User> userManager,
-     IUserService userService,
-     RoleManager<Role> roleManager)
+            IMapper mapper,
+            IConfiguration configuration,
+            IPasswordHasher<User> passwordHasher,
+            ILogger<AuthService> logger,
+            UserManager<User> userManager,
+            IUserService userService,
+            RoleManager<Role> roleManager)
         {
             _mapper = mapper;
             _configuration = configuration;
@@ -39,80 +40,117 @@ namespace TurnPoint.Jo.APIs.Services
             _roleManager = roleManager;
         }
 
-        public async Task<bool> RegisterUserAsync(RegisterUserDto registerUserDto)
+        public async Task<GenericResponse<RegisterUserDto>> RegisterUserAsync(RegisterUserDto registerUserDto)
         {
-            if (await IsUsersPhoneOrEmailTakenAsync(registerUserDto.Email))
+            var isUsersPhoneOrEmailTaken = await _userManager.Users
+           .FirstOrDefaultAsync(u => u.Email == registerUserDto.Email || u.PhoneNumber == registerUserDto.PhoneNumber);
+
+            if (isUsersPhoneOrEmailTaken == null)
             {
-                _logger.LogWarning("Email {Email} is already taken.", registerUserDto.Email);
-                return false;
+                _logger.LogWarning("Email or phone is already taken", registerUserDto.Email , registerUserDto.PhoneNumber);
+                return new GenericResponse<RegisterUserDto>
+                {
+                    Success = false,
+                    Message = "Email or Phone is already taken."
+                };
             }
 
             var user = _mapper.Map<User>(registerUserDto);
             user.PasswordHash = _passwordHasher.HashPassword(user, registerUserDto.Password);
 
             var result = await _userManager.CreateAsync(user);
-            if (!result.Succeeded)
-            {
-                _logger.LogError("Error creating user: {Errors}", string.Join(", ", result.Errors.Select(e => e.Description)));
-                return false;
-            }
 
             await EnsureRolesExist();
-
             await _userManager.AddToRoleAsync(user, "User");
 
-            return true;
+            return new GenericResponse<RegisterUserDto>
+            {
+                Success = true,
+                Message = "User created successfully.",
+                Data = registerUserDto
+            };
         }
-        public async Task<string?> LoginUserAsync(LoginUserDto loginUserDto)
+
+        public async Task<GenericResponse<string>> LoginUserAsync(LoginUserDto loginUserDto)
         {
             var user = await _userManager.Users
-                              .FirstOrDefaultAsync(u => u.PhoneNumber == loginUserDto.EmailOrPhone || u.Email == loginUserDto.EmailOrPhone);
-            if (user == null)
+                .FirstOrDefaultAsync(u => u.PhoneNumber == loginUserDto.EmailOrPhone || u.Email == loginUserDto.EmailOrPhone);
+
+            if (user == null || (!user.EmailConfirmed && !user.PhoneNumberConfirmed))
             {
-                _logger.LogWarning("Login failed for email/phone: {EmailOrPhone}. User not found.", loginUserDto.EmailOrPhone);
-                return null;
-            }
-            else if (user.EmailConfirmed && user.PhoneNumberConfirmed == false)
-            {
-                _logger.LogWarning("Login failed for email/phone: {EmailOrPhone}. User not found.", loginUserDto.EmailOrPhone);
-                return null;
+                _logger.LogWarning("Login failed for email or phone: {EmailOrPhone}. Confirmation issue.", loginUserDto.EmailOrPhone);
+                return new GenericResponse<string>
+                {
+                    Success = false,
+                    Message = "Login failed. Email or phone not confirmed."
+                };
             }
 
-            var userDto = _mapper.Map<User>(user);
-
-            if (_passwordHasher.VerifyHashedPassword(user, userDto.PasswordHash, loginUserDto.Password) == PasswordVerificationResult.Failed)
+            if (_passwordHasher.VerifyHashedPassword(user, user.PasswordHash, loginUserDto.Password) == PasswordVerificationResult.Failed)
             {
                 _logger.LogWarning("Login failed for email/phone: {EmailOrPhone}. Incorrect password.", loginUserDto.EmailOrPhone);
-                return null;
+                return new GenericResponse<string>
+                {
+                    Success = false,
+                    Message = "Incorrect password."
+                };
             }
 
-            return await GenerateJwtToken(userDto);
+            var token = await GenerateJwtToken(user);
+            return new GenericResponse<string>
+            {
+                Success = true,
+                Message = "Login successful.",
+                Data = token
+            };
         }
+
         public async Task<bool> IsUsersPhoneOrEmailTakenAsync(string emailOrPhone)
         {
-            if (string.IsNullOrWhiteSpace(emailOrPhone))
-            {
-                _logger.LogWarning("Email or phone cannot be null or empty.", nameof(emailOrPhone));
-                return false;
-            }
-
             var user = await _userService.GetUserByEmailOrPhoneAsync(emailOrPhone);
-            return user != null;
+            return user == null;
         }
-        public async Task<bool> UserPasswordResetAsync(ResetPasswordDto resetPasswordDto)
-        { 
 
+        public async Task<GenericResponse<bool>> UserPasswordResetAsync(ResetPasswordDto resetPasswordDto)
+        {
             var user = await _userManager.Users
                 .FirstOrDefaultAsync(u => u.PhoneNumber == resetPasswordDto.EmailOrPhone || u.Email == resetPasswordDto.EmailOrPhone);
 
             if (user == null)
             {
-                _logger.LogWarning("User with email or phone {EmailOrPhone} not found.", resetPasswordDto.EmailOrPhone);
-                return false;
+                _logger.LogWarning("User with email or phone not found: {EmailOrPhone}", resetPasswordDto.EmailOrPhone);
+                return new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "User with email or phone not found."
+                };
             }
 
-            return true;
+            if (resetPasswordDto.Opt != user.Otp)
+            {
+                return new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "The entered OTP is not correct."
+                };
+            }
+
+            var newHashedPassword = _passwordHasher.HashPassword(user, resetPasswordDto.NewPassword);
+            user.PasswordHash = newHashedPassword;
+
+            user.Otp = null;
+            user.OtpExpiresAt = null;
+
+            var result = await _userManager.UpdateAsync(user);
+
+            return new GenericResponse<bool>
+            {
+                Success = true,
+                Message = "Password reset successfully.",
+                Data = true
+            };
         }
+
         private async Task<string> GenerateJwtToken(User user)
         {
             var claims = new List<Claim>
@@ -131,8 +169,8 @@ namespace TurnPoint.Jo.APIs.Services
             var secretKey = _configuration["JwtSettings:SecretKey"];
             if (string.IsNullOrEmpty(secretKey))
             {
-                _logger.LogWarning("JWT secret key is not configured.");
-                throw new ArgumentNullException(nameof(secretKey), "JWT secret key is missing.");
+                _logger.LogError("JWT secret key is missing.");
+                throw new ArgumentNullException("JwtSettings:SecretKey", "JWT secret key is missing.");
             }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
@@ -148,21 +186,22 @@ namespace TurnPoint.Jo.APIs.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
         private async Task EnsureRolesExist()
         {
             var roles = new[] { "Admin", "User", "Moderator" };
             foreach (var role in roles)
             {
-                var roleExists = await _roleManager.RoleExistsAsync(role);
-                if (!roleExists)
+                if (!await _roleManager.RoleExistsAsync(role))
                 {
-                    var roleResult = await _roleManager.CreateAsync(new Role { Name = role });
-                    if (!roleResult.Succeeded)
+                    var result = await _roleManager.CreateAsync(new Role { Name = role });
+                    if (!result.Succeeded)
                     {
-                        _logger.LogError("Error creating role {Role}.", role);
+                        _logger.LogError("Error creating role: {Role}", role);
                     }
                 }
             }
         }
     }
 }
+

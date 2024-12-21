@@ -48,9 +48,7 @@ namespace TurnPoint.Jo.APIs.Validators.AuthenticationValidators
                 .Must(dob => dob.Value <= DateTime.UtcNow.AddYears(-13))
                 .WithMessage("User must be at least 13 years old.");
 
-            RuleFor(x => x.InterestIds)
-                .NotNull().WithMessage("At least one interest must be selected.")
-                .Must(ids => ids.Count > 0).WithMessage("At least one interest must be selected.");
+     
         }
     }
 

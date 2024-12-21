@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TurnPoint.Jo.APIs.Entities;
 using TurnPoint.Jo.APIs.Interfaceses;
-using TernPoint.Jo.Talenti.DatabaseManager;
 using TurnPoint.Jo.APIs.Common.InterestDtos;
+using TurnPoint.Jo.APIs.Common.Shared;
 
 namespace TurnPoint.Jo.APIs.Services
 {
@@ -15,81 +15,137 @@ namespace TurnPoint.Jo.APIs.Services
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<GetInterestDto>> GetAllInterestsAsync()
+        public async Task<GenericResponse<IEnumerable<GetInterestDto>>> GetAllInterestsAsync()
         {
-            return await _dbContext.Interests
+            var interests = await _dbContext.Interests
                 .Select(i => new GetInterestDto
                 {
                     Id = i.Id,
                     Name = i.Name
                 })
-                .ToListAsync(); 
+                .ToListAsync();
+
+            return new GenericResponse<IEnumerable<GetInterestDto>>
+            {
+                Success = true,
+                Message = "Interests retrieved successfully.",
+                Data = interests
+            };
         }
 
-  
-        public async Task<GetInterestDto?> GetInterestByIdAsync(int interestId)
+        public async Task<GenericResponse<GetInterestDto>> GetInterestByIdAsync(int interestId)
         {
-            return await _dbContext.Interests
+            var interest = await _dbContext.Interests
                 .Where(i => i.Id == interestId)
                 .Select(i => new GetInterestDto
                 {
                     Id = i.Id,
                     Name = i.Name
                 })
-                .FirstOrDefaultAsync(); 
+                .FirstOrDefaultAsync();
+
+            if (interest == null)
+            {
+                return new GenericResponse<GetInterestDto>
+                {
+                    Success = false,
+                    Message = "Interest not found."
+                };
+            }
+
+            return new GenericResponse<GetInterestDto>
+            {
+                Success = true,
+                Message = "Interest retrieved successfully.",
+                Data = interest
+            };
         }
 
-        public async Task<bool> AddInterestAsync(string interestName)
+        public async Task<GenericResponse<bool>> AddInterestAsync(string interestName)
         {
             var existingInterest = await _dbContext.Interests
                 .FirstOrDefaultAsync(i => i.Name == interestName);
 
             if (existingInterest != null)
             {
-                return false;
+                return new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Interest already exists."
+                };
             }
 
             _dbContext.Interests.Add(new InterestsLookup { Name = interestName });
             await _dbContext.SaveChangesAsync();
-            return true;
+
+            return new GenericResponse<bool>
+            {
+                Success = true,
+                Message = "Interest added successfully.",
+                Data = true
+            };
         }
 
-
-
-        public async Task<bool> UpdateInterestAsync(int interestId, string updatedInterestName)
+        public async Task<GenericResponse<bool>> UpdateInterestAsync(int interestId, string updatedInterestName)
         {
             var existingInterest = await _dbContext.Interests
                 .FirstOrDefaultAsync(i => i.Name == updatedInterestName);
 
             if (existingInterest != null)
             {
-                return false;
+                return new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Interest with the updated name already exists."
+                };
             }
 
             var interest = await _dbContext.Interests
                 .FirstOrDefaultAsync(i => i.Id == interestId);
 
             if (interest == null)
-                return false;
+            {
+                return new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Interest not found."
+                };
+            }
 
             interest.Name = updatedInterestName;
             await _dbContext.SaveChangesAsync();
-            return true;
+
+            return new GenericResponse<bool>
+            {
+                Success = true,
+                Message = "Interest updated successfully.",
+                Data = true
+            };
         }
 
-        public async Task<bool> DeleteInterestAsync(int interestId)
+        public async Task<GenericResponse<bool>> DeleteInterestAsync(int interestId)
         {
             var interest = await _dbContext.Interests
                 .FirstOrDefaultAsync(i => i.Id == interestId);
 
             if (interest == null)
-                return false;
+            {
+                return new GenericResponse<bool>
+                {
+                    Success = false,
+                    Message = "Interest not found."
+                };
+            }
 
             _dbContext.Interests.Remove(interest);
             await _dbContext.SaveChangesAsync();
-            return true;
+
+            return new GenericResponse<bool>
+            {
+                Success = true,
+                Message = "Interest deleted successfully.",
+                Data = true
+            };
         }
-
-
     }
 }

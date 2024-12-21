@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TurnPoint.Jo.Talenti.SharedModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+364e834f13b5ea37d83d444ff151366c768ca57b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f3537b7cddbe6bb71fe5969350f780e52da684b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TurnPoint.Jo.Talenti.SharedModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TurnPoint.Jo.Talenti.SharedModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
