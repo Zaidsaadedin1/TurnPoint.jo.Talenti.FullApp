@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -43,11 +44,11 @@ namespace TurnPoint.Jo.APIs.Services
         public async Task<GenericResponse<RegisterUserDto>> RegisterUserAsync(RegisterUserDto registerUserDto)
         {
             var isUsersPhoneOrEmailTaken = await _userManager.Users
-           .FirstOrDefaultAsync(u => u.Email == registerUserDto.Email || u.PhoneNumber == registerUserDto.PhoneNumber);
+           .FirstOrDefaultAsync(u => u.Email == registerUserDto.Email || u.PhoneNumber == registerUserDto.PhoneNumber || u.UserName == registerUserDto.UserName || u.Name == registerUserDto.Name);
 
-            if (isUsersPhoneOrEmailTaken == null)
+            if (isUsersPhoneOrEmailTaken != null)
             {
-                _logger.LogWarning("Email or phone is already taken", registerUserDto.Email , registerUserDto.PhoneNumber);
+                _logger.LogWarning("Email or phone is already taken", registerUserDto.Email, registerUserDto.PhoneNumber);
                 return new GenericResponse<RegisterUserDto>
                 {
                     Success = false,
@@ -155,16 +156,18 @@ namespace TurnPoint.Jo.APIs.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email)
+                new Claim("name", user.UserName), // Custom key for name
+                new Claim("id", user.Id.ToString()), // Custom key for ID
+                new Claim("email", user.Email) // Custom key for email
             };
 
-            var roles = await _userManager.GetRolesAsync(user);
-            foreach (var role in roles)
+            var Roles = await _userManager.GetRolesAsync(user);
+            Console.WriteLine("Roles for user: " + string.Join(", ", Roles));
+            foreach (var role in Roles)
             {
-                claims.Add(new Claim(ClaimTypes.Role, role));
+                claims.Add(new Claim("Roles", role));
             }
+
 
             var secretKey = _configuration["JwtSettings:SecretKey"];
             if (string.IsNullOrEmpty(secretKey))

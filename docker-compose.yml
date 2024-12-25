@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./turnpoint.jo.talenti  # Ensure this includes all project files
+      dockerfile: TurnPoint.Jo.APIs/Dockerfile
+     # The Dockerfile inside the context directory
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=db;Database=YourDatabaseName;User=sa;Password=P@ssword;TrustServerCertificate=True;
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server
+    environment:
+      SA_PASSWORD: "P@ssword"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+volumes:
+  sql_data:

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TurnPoint.Jo.APIs.Interfaceses;
-using Microsoft.AspNetCore.Authorization;
 using TurnPoint.Jo.APIs.Common.Shared;
 using TurnPoint.Jo.APIs.Common.InterestDtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TurnPoint.Jo.APIs.Controllers
 {
@@ -17,7 +17,7 @@ namespace TurnPoint.Jo.APIs.Controllers
             _interestsService = interestsService;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet("GetAllInterests")]
         public async Task<ActionResult<GenericResponse<IEnumerable<GetInterestDto>>>> GetAllInterestsAsync()
         {

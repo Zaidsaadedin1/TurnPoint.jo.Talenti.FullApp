@@ -1,0 +1,127 @@
+2024-12-23 22:55:14.168 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-23 22:55:14.483 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-23 22:55:14.487 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-23 22:55:14.488 +03:00 [INF] Hosting environment: Development
+2024-12-23 22:55:14.488 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-23 22:55:21.985 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-23 22:55:22.413 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 440.6484ms
+2024-12-23 22:55:22.903 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 22:55:22.908 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.7503ms
+2024-12-23 22:55:22.911 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-23 22:55:22.988 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.6143ms
+2024-12-23 22:55:23.074 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-23 22:55:23.344 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 269.1868ms
+2024-12-23 23:29:10.617 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-23 23:29:10.911 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-23 23:29:10.915 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-23 23:29:10.916 +03:00 [INF] Hosting environment: Development
+2024-12-23 23:29:10.916 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-23 23:29:21.721 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-23 23:29:22.296 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 594.5077ms
+2024-12-23 23:29:22.337 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 23:29:22.339 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.1244ms
+2024-12-23 23:29:22.356 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-23 23:29:22.416 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.4656ms
+2024-12-23 23:29:22.493 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-23 23:29:22.742 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 249.1011ms
+2024-12-23 23:29:42.511 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 24
+2024-12-23 23:29:42.523 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-23 23:29:42.577 +03:00 [INF] CORS policy execution failed.
+2024-12-23 23:29:42.577 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-23 23:29:42.662 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-23 23:29:42.727 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-23 23:30:23.724 +03:00 [INF] Processing SendOtp request for xhyperdrive5@gmial.com
+2024-12-23 23:30:31.981 +03:00 [INF] Executed DbCommand (118ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-23 23:30:36.861 +03:00 [ERR] User with email/phone xhyperdrive5@gmial.com not found.
+2024-12-23 23:30:41.095 +03:00 [WRN] Failed to send OTP for xhyperdrive5@gmial.com
+2024-12-23 23:30:42.359 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-23 23:30:44.902 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 62169.1216ms
+2024-12-23 23:30:44.903 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-23 23:30:46.779 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 64268.157ms
+2024-12-23 23:31:07.010 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-23 23:31:07.072 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-23 23:31:07.082 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-23 23:31:07.083 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 401 0 null 72.9377ms
+2024-12-23 23:31:14.409 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-23 23:31:14.418 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-23 23:31:14.419 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-23 23:31:14.420 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 401 0 null 10.7937ms
+2024-12-23 23:31:36.906 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-23 23:31:36.922 +03:00 [INF] CORS policy execution failed.
+2024-12-23 23:31:36.922 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-23 23:31:36.922 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-23 23:31:36.923 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-23 23:31:43.000 +03:00 [INF] Processing SendOtp request for zaidsaadeidn10@gmial.com
+2024-12-23 23:31:44.119 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-23 23:31:44.120 +03:00 [ERR] User with email/phone zaidsaadeidn10@gmial.com not found.
+2024-12-23 23:31:44.120 +03:00 [WRN] Failed to send OTP for zaidsaadeidn10@gmial.com
+2024-12-23 23:31:44.121 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-23 23:31:44.122 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 7198.5004ms
+2024-12-23 23:31:44.122 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-23 23:31:44.123 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 7217.04ms
+2024-12-23 23:32:46.371 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 236
+2024-12-23 23:32:46.375 +03:00 [INF] CORS policy execution failed.
+2024-12-23 23:32:46.375 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-23 23:32:46.376 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-23 23:32:46.400 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-23 23:32:47.162 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-23 23:32:47.164 +03:00 [WRN] Email or phone is already taken
+2024-12-23 23:32:47.164 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-23 23:32:47.169 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 768.8635ms
+2024-12-23 23:32:47.169 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-23 23:32:47.170 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/json; charset=utf-8 798.7895ms
+2024-12-23 23:32:58.953 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-23 23:32:58.954 +03:00 [INF] CORS policy execution failed.
+2024-12-23 23:32:58.954 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-23 23:32:58.954 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-23 23:32:58.954 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-23 23:33:04.760 +03:00 [INF] Processing SendOtp request for zaidsaadeidn11@gmial.com
+2024-12-23 23:33:07.959 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-23 23:33:10.020 +03:00 [ERR] User with email/phone zaidsaadeidn11@gmial.com not found.
+2024-12-23 23:33:14.719 +03:00 [WRN] Failed to send OTP for zaidsaadeidn11@gmial.com
+2024-12-23 23:33:15.529 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-23 23:33:17.935 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 18980.9423ms
+2024-12-23 23:33:17.935 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-23 23:33:17.935 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 18982.27ms
+2024-12-23 23:59:06.022 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-23 23:59:06.427 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-23 23:59:06.432 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-23 23:59:06.434 +03:00 [INF] Hosting environment: Development
+2024-12-23 23:59:06.434 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-23 23:59:09.970 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-23 23:59:10.370 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 408.5178ms
+2024-12-23 23:59:10.394 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 23:59:10.397 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.2688ms
+2024-12-23 23:59:10.422 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-23 23:59:10.473 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.8816ms
+2024-12-23 23:59:10.562 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-23 23:59:10.841 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 278.9771ms
+2024-12-23 23:59:26.089 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 244
+2024-12-23 23:59:26.097 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-23 23:59:26.139 +03:00 [INF] CORS policy execution failed.
+2024-12-23 23:59:26.139 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-23 23:59:26.193 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-23 23:59:26.223 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-23 23:59:31.587 +03:00 [INF] Executed DbCommand (92ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-23 23:59:31.619 +03:00 [WRN] Email or phone is already taken
+2024-12-23 23:59:31.632 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-23 23:59:31.670 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 5427.2178ms
+2024-12-23 23:59:31.673 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-23 23:59:31.717 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/json; charset=utf-8 5628.2729ms

@@ -1,0 +1,872 @@
+2024-12-24 00:00:11.170 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 244
+2024-12-24 00:00:11.206 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:00:11.206 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:00:11.207 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:00:11.207 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:00:13.460 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:00:43.138 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:00:43.616 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:00:43.623 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:00:43.639 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:00:43.639 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:00:44.013 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:00:44.465 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 460.5416ms
+2024-12-24 00:00:44.500 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:00:44.503 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.0749ms
+2024-12-24 00:00:44.558 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:00:44.618 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.1784ms
+2024-12-24 00:00:44.718 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:00:44.943 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 224.883ms
+2024-12-24 00:00:47.502 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 244
+2024-12-24 00:00:47.511 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:00:47.567 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:00:47.568 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:00:47.689 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:00:47.764 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:00:56.152 +03:00 [INF] Executed DbCommand (162ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:01:14.553 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:01:14.735 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:01:14.740 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:01:16.068 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:01:16.233 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:01:16.252 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:01:24.283 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:01:26.795 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 39021.5348ms
+2024-12-24 00:01:26.797 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:01:26.822 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 39320.015ms
+2024-12-24 00:01:49.598 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:01:49.611 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:01:49.612 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:01:49.614 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:01:49.626 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:02:06.488 +03:00 [INF] Processing SendOtp request for zaidsaadeidn11@gmial.com
+2024-12-24 00:02:09.709 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:02:26.328 +03:00 [ERR] User with email/phone zaidsaadeidn11@gmial.com not found.
+2024-12-24 00:02:28.112 +03:00 [WRN] Failed to send OTP for zaidsaadeidn11@gmial.com
+2024-12-24 00:02:28.112 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:02:28.114 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 38487.6347ms
+2024-12-24 00:02:28.114 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:02:28.115 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 38519.2888ms
+2024-12-24 00:07:17.338 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:07:17.661 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:07:17.665 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:07:17.666 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:07:17.666 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:07:18.209 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:07:18.677 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 483.0313ms
+2024-12-24 00:07:18.709 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:07:18.713 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.6857ms
+2024-12-24 00:07:18.747 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:07:18.814 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.5769ms
+2024-12-24 00:07:18.954 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:07:19.227 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 273.3066ms
+2024-12-24 00:07:23.333 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 244
+2024-12-24 00:07:23.337 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:07:23.371 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:07:23.372 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:07:23.420 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:07:23.453 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:07:28.272 +03:00 [INF] Executed DbCommand (82ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:08:08.239 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:08:08.523 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:08:08.526 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:08:08.527 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:08:08.527 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:08:09.051 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:08:09.524 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 486.8635ms
+2024-12-24 00:08:09.560 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:08:09.565 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.823ms
+2024-12-24 00:08:09.605 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:08:09.672 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.8907ms
+2024-12-24 00:08:09.814 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:08:10.086 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 271.8088ms
+2024-12-24 00:08:19.566 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 243
+2024-12-24 00:08:19.571 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:08:19.601 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:08:19.601 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:08:19.661 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:08:19.695 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:08:25.342 +03:00 [INF] Executed DbCommand (108ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:10:14.157 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:10:14.465 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:10:14.469 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:10:14.470 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:10:14.470 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:10:14.908 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:10:15.442 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 544.8413ms
+2024-12-24 00:10:15.474 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:10:15.479 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.8089ms
+2024-12-24 00:10:15.517 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:10:15.588 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.9037ms
+2024-12-24 00:10:15.699 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:10:16.014 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 315.3372ms
+2024-12-24 00:10:18.650 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 243
+2024-12-24 00:10:18.656 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:10:18.683 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:10:18.683 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:10:18.734 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:10:18.767 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:10:23.541 +03:00 [INF] Executed DbCommand (92ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:10:34.850 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:10:35.095 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [DateOfBirth], [DeletedAt], [Email], [EmailConfirmed], [Gender], [LastName], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [Otp], [OtpExpiresAt], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2024-12-24 00:10:35.907 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:10:35.947 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:10:35.949 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:10:36.604 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:10:36.719 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:10:36.727 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:10:36.744 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:10:36.793 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p25='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p26='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 256), @p15='?' (Size = 256), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000), @p22='?' (DbType = Boolean), @p23='?' (DbType = DateTime2), @p24='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [DateOfBirth] = @p5, [DeletedAt] = @p6, [Email] = @p7, [EmailConfirmed] = @p8, [Gender] = @p9, [LastName] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [Name] = @p13, [NormalizedEmail] = @p14, [NormalizedUserName] = @p15, [Otp] = @p16, [OtpExpiresAt] = @p17, [PasswordHash] = @p18, [PhoneNumber] = @p19, [PhoneNumberConfirmed] = @p20, [SecurityStamp] = @p21, [TwoFactorEnabled] = @p22, [UpdatedAt] = @p23, [UserName] = @p24
+OUTPUT 1
+WHERE [Id] = @p25 AND [ConcurrencyStamp] = @p26;
+2024-12-24 00:10:40.017 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:10:44.062 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 25291.1161ms
+2024-12-24 00:10:44.063 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:10:44.073 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 25422.9394ms
+2024-12-24 00:10:56.679 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:10:56.681 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:10:56.681 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:10:56.682 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:10:56.686 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:11:02.551 +03:00 [INF] Processing SendOtp request for zaidsaadeidn11@gmial.com
+2024-12-24 00:11:08.840 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:11:32.350 +03:00 [ERR] User with email/phone zaidsaadeidn11@gmial.com not found.
+2024-12-24 00:11:32.353 +03:00 [WRN] Failed to send OTP for zaidsaadeidn11@gmial.com
+2024-12-24 00:11:32.358 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:11:32.365 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 35678.9594ms
+2024-12-24 00:11:32.365 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:11:32.366 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 35687.161ms
+2024-12-24 00:11:57.868 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 234
+2024-12-24 00:11:57.876 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:11:57.876 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:11:57.878 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:11:57.878 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:12:01.752 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:12:01.816 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:12:01.822 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:12:01.824 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:12:01.826 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:12:01.828 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:12:01.831 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:12:01.832 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:12:01.838 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:12:01.838 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:12:01.839 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 3960.7093ms
+2024-12-24 00:12:01.839 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:12:01.839 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 3970.7225ms
+2024-12-24 00:12:06.939 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:12:06.940 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:12:06.940 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:12:06.940 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:12:06.940 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:12:25.838 +03:00 [INF] Processing SendOtp request for zaidsaadeidn11@gmial.com
+2024-12-24 00:12:36.010 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:13:05.587 +03:00 [ERR] User with email/phone zaidsaadeidn11@gmial.com not found.
+2024-12-24 00:13:05.594 +03:00 [WRN] Failed to send OTP for zaidsaadeidn11@gmial.com
+2024-12-24 00:13:05.594 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:13:05.595 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 58654.7475ms
+2024-12-24 00:13:05.596 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:13:05.629 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 58657.5342ms
+2024-12-24 00:13:12.416 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 234
+2024-12-24 00:13:12.416 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:13:12.419 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:13:12.420 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:13:12.422 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:13:15.565 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:13:40.110 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:14:03.332 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:14:03.334 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:14:03.340 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:14:03.343 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:14:03.346 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:14:03.347 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:14:03.349 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:14:03.349 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:14:03.350 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 50927.9436ms
+2024-12-24 00:14:03.350 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:14:03.350 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 50934.1381ms
+2024-12-24 00:14:05.229 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 240
+2024-12-24 00:14:05.230 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:14:05.230 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:14:05.230 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:14:05.230 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:14:06.928 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:14:06.992 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:14:06.999 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [DateOfBirth], [DeletedAt], [Email], [EmailConfirmed], [Gender], [LastName], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [Otp], [OtpExpiresAt], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2024-12-24 00:14:07.000 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:14:07.002 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:14:07.003 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:14:07.004 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:14:07.006 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:14:07.007 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:14:07.009 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:14:07.017 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p25='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p26='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 256), @p15='?' (Size = 256), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000), @p22='?' (DbType = Boolean), @p23='?' (DbType = DateTime2), @p24='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [DateOfBirth] = @p5, [DeletedAt] = @p6, [Email] = @p7, [EmailConfirmed] = @p8, [Gender] = @p9, [LastName] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [Name] = @p13, [NormalizedEmail] = @p14, [NormalizedUserName] = @p15, [Otp] = @p16, [OtpExpiresAt] = @p17, [PasswordHash] = @p18, [PhoneNumber] = @p19, [PhoneNumberConfirmed] = @p20, [SecurityStamp] = @p21, [TwoFactorEnabled] = @p22, [UpdatedAt] = @p23, [UserName] = @p24
+OUTPUT 1
+WHERE [Id] = @p25 AND [ConcurrencyStamp] = @p26;
+2024-12-24 00:14:07.017 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:14:07.018 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 1787.5003ms
+2024-12-24 00:14:07.018 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:14:07.018 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 1788.4587ms
+2024-12-24 00:14:13.963 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:14:13.963 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:14:13.964 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:14:13.964 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:14:13.964 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:14:16.176 +03:00 [INF] Processing SendOtp request for zaidsaadeidn11@gmial.com
+2024-12-24 00:14:19.667 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:14:30.406 +03:00 [ERR] User with email/phone zaidsaadeidn11@gmial.com not found.
+2024-12-24 00:14:30.406 +03:00 [WRN] Failed to send OTP for zaidsaadeidn11@gmial.com
+2024-12-24 00:14:30.406 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:14:30.406 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 16442.3007ms
+2024-12-24 00:14:30.406 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:14:30.407 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 16443.1824ms
+2024-12-24 00:15:05.385 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 241
+2024-12-24 00:15:05.385 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:15:05.385 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:15:05.386 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:15:05.386 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:15:08.519 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:15:08.520 +03:00 [WRN] Email or phone is already taken
+2024-12-24 00:15:08.520 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:15:08.521 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 3134.9211ms
+2024-12-24 00:15:08.521 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:15:08.521 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/json; charset=utf-8 3135.8168ms
+2024-12-24 00:15:20.722 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 241
+2024-12-24 00:15:20.722 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:15:20.722 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:15:20.723 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:15:20.723 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:15:22.875 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-24 00:15:22.944 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:15:22.947 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:15:22.948 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:15:22.950 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:15:22.952 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:15:22.955 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:15:22.957 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:15:22.959 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:15:22.959 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:15:22.959 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 2236.442ms
+2024-12-24 00:15:22.959 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:15:22.960 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 2237.5592ms
+2024-12-24 00:15:28.537 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:15:28.537 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:15:28.537 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:15:28.538 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:15:28.538 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:15:30.924 +03:00 [INF] Processing SendOtp request for zaidsaadeidn11@gmial.com
+2024-12-24 00:15:34.097 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:15:42.650 +03:00 [ERR] User with email/phone zaidsaadeidn11@gmial.com not found.
+2024-12-24 00:15:42.650 +03:00 [WRN] Failed to send OTP for zaidsaadeidn11@gmial.com
+2024-12-24 00:15:42.650 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:15:42.651 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 14112.8404ms
+2024-12-24 00:15:42.651 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:15:42.651 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 14113.8852ms
+2024-12-24 00:19:15.184 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:19:15.582 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:19:15.587 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:19:15.588 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:19:15.588 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:19:17.629 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:19:18.081 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 460.9361ms
+2024-12-24 00:19:18.116 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:19:18.121 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.1239ms
+2024-12-24 00:19:18.150 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:19:18.219 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.0169ms
+2024-12-24 00:19:18.336 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:19:18.633 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 296.9395ms
+2024-12-24 00:19:21.666 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 241
+2024-12-24 00:19:21.670 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:19:21.709 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:19:21.710 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:19:21.767 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:19:21.805 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:19:24.768 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000), @__registerUserDto_UserName_2='?' (Size = 256), @__registerUserDto_Name_3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1 OR [a].[UserName] = @__registerUserDto_UserName_2 OR [a].[Name] = @__registerUserDto_Name_3
+2024-12-24 00:19:24.999 +03:00 [WRN] Email or phone is already taken
+2024-12-24 00:19:25.017 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:19:25.038 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 3227.8375ms
+2024-12-24 00:19:25.039 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:19:25.052 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/json; charset=utf-8 3386.0766ms
+2024-12-24 00:19:32.559 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 242
+2024-12-24 00:19:32.562 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:19:32.562 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:19:32.563 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:19:32.563 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:19:32.641 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000), @__registerUserDto_UserName_2='?' (Size = 256), @__registerUserDto_Name_3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1 OR [a].[UserName] = @__registerUserDto_UserName_2 OR [a].[Name] = @__registerUserDto_Name_3
+2024-12-24 00:19:32.642 +03:00 [WRN] Email or phone is already taken
+2024-12-24 00:19:32.643 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:19:32.643 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 79.7371ms
+2024-12-24 00:19:32.643 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:19:32.643 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/json; charset=utf-8 83.9792ms
+2024-12-24 00:20:04.425 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 242
+2024-12-24 00:20:04.435 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:20:04.435 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:20:04.439 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:20:04.439 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 00:20:04.489 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000), @__registerUserDto_UserName_2='?' (Size = 256), @__registerUserDto_Name_3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1 OR [a].[UserName] = @__registerUserDto_UserName_2 OR [a].[Name] = @__registerUserDto_Name_3
+2024-12-24 00:20:04.708 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:20:05.034 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [DateOfBirth], [DeletedAt], [Email], [EmailConfirmed], [Gender], [LastName], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [Otp], [OtpExpiresAt], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2024-12-24 00:20:05.125 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:20:05.152 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:20:05.155 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-24 00:20:05.177 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:20:05.255 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-12-24 00:20:05.269 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-12-24 00:20:05.306 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:20:05.417 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p25='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p26='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 256), @p15='?' (Size = 256), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000), @p22='?' (DbType = Boolean), @p23='?' (DbType = DateTime2), @p24='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [DateOfBirth] = @p5, [DeletedAt] = @p6, [Email] = @p7, [EmailConfirmed] = @p8, [Gender] = @p9, [LastName] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [Name] = @p13, [NormalizedEmail] = @p14, [NormalizedUserName] = @p15, [Otp] = @p16, [OtpExpiresAt] = @p17, [PasswordHash] = @p18, [PhoneNumber] = @p19, [PhoneNumberConfirmed] = @p20, [SecurityStamp] = @p21, [TwoFactorEnabled] = @p22, [UpdatedAt] = @p23, [UserName] = @p24
+OUTPUT 1
+WHERE [Id] = @p25 AND [ConcurrencyStamp] = @p26;
+2024-12-24 00:20:05.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 00:20:05.442 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 1002.7415ms
+2024-12-24 00:20:05.442 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 00:20:05.442 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 200 null application/json; charset=utf-8 1017.5018ms
+2024-12-24 00:20:17.698 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:20:17.698 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:20:17.699 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:20:17.699 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:20:17.708 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:20:22.358 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:20:25.270 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:20:33.348 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:20:33.405 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:33:55.257 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:33:55.843 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:33:55.851 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:33:55.852 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:33:55.853 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:33:59.755 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:34:00.237 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 494.2522ms
+2024-12-24 00:34:00.276 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:34:00.280 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.147ms
+2024-12-24 00:34:00.299 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:34:00.348 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.9406ms
+2024-12-24 00:34:00.431 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:34:00.685 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 253.796ms
+2024-12-24 00:34:04.132 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:34:04.137 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:34:04.176 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:34:04.177 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:34:04.284 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:34:04.363 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:34:08.731 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:34:12.715 +03:00 [INF] Executed DbCommand (211ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:34:13.085 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:34:13.386 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:34:35.195 +03:00 [ERR] Failed to send OTP email to zaidsaadedin11@gmail.com.
+2024-12-24 00:34:35.198 +03:00 [WRN] Failed to send OTP for zaidsaadedin11@gmail.com
+2024-12-24 00:34:35.242 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:34:35.301 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 30921.5155ms
+2024-12-24 00:34:35.304 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:34:35.349 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 31217.0237ms
+2024-12-24 00:34:49.212 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:34:49.220 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:34:49.220 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:34:49.224 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:34:49.225 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:34:52.674 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:35:00.265 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:35:04.835 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:35:04.865 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:38:30.254 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:38:31.031 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:38:31.043 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:38:31.046 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:38:31.046 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:38:33.927 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:38:34.309 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 407.2321ms
+2024-12-24 00:38:34.336 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:38:34.339 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.5552ms
+2024-12-24 00:38:34.374 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:38:34.423 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.6835ms
+2024-12-24 00:38:34.514 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:38:34.726 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 211.8844ms
+2024-12-24 00:38:42.480 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:38:42.494 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:38:42.561 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:38:42.562 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:38:42.693 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:38:42.784 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:38:43.556 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:38:56.197 +03:00 [INF] Executed DbCommand (126ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:39:03.620 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:39:03.987 +03:00 [INF] Executed DbCommand (86ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:39:25.593 +03:00 [ERR] Failed to send OTP email to zaidsaadedin11@gmail.com.
+2024-12-24 00:39:25.595 +03:00 [WRN] Failed to send OTP for zaidsaadedin11@gmail.com
+2024-12-24 00:39:25.621 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:39:25.677 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 42878.0379ms
+2024-12-24 00:39:25.679 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:39:25.728 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 43247.705ms
+2024-12-24 00:41:05.979 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:41:06.724 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:41:06.730 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:41:06.732 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:41:06.732 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:41:10.449 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:41:10.986 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 548.9751ms
+2024-12-24 00:41:11.042 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:41:11.049 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 10.4618ms
+2024-12-24 00:41:11.076 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:41:11.133 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.169ms
+2024-12-24 00:41:11.230 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:41:11.454 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 223.6937ms
+2024-12-24 00:41:17.897 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:41:17.908 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:41:17.972 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:41:17.973 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:41:18.105 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:41:18.185 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:41:18.737 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:41:25.347 +03:00 [INF] Executed DbCommand (129ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:41:25.815 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:41:26.190 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:41:47.901 +03:00 [ERR] Failed to send OTP email to zaidsaadedin11@gmail.com.
+2024-12-24 00:41:47.903 +03:00 [WRN] Failed to send OTP for zaidsaadedin11@gmail.com
+2024-12-24 00:41:47.963 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:41:48.040 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 29833.1489ms
+2024-12-24 00:41:48.044 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:41:48.091 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 30193.7647ms
+2024-12-24 00:44:39.481 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:44:39.755 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:44:39.761 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:44:39.762 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:44:39.763 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:44:40.310 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:44:40.699 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 397.7788ms
+2024-12-24 00:44:40.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:44:40.742 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.6785ms
+2024-12-24 00:44:40.801 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:44:40.868 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.463ms
+2024-12-24 00:44:40.995 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:44:41.196 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 200.7474ms
+2024-12-24 00:45:00.069 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:45:00.074 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:45:00.104 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:45:00.105 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:45:00.202 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:45:00.265 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:45:10.546 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:45:15.651 +03:00 [INF] Executed DbCommand (86ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:45:16.005 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:45:16.483 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:45:37.814 +03:00 [ERR] Failed to send OTP email to zaidsaadedin11@gmail.com.
+2024-12-24 00:45:37.815 +03:00 [WRN] Failed to send OTP for zaidsaadedin11@gmail.com
+2024-12-24 00:45:37.836 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:45:37.864 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 37590.0456ms
+2024-12-24 00:45:37.866 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:45:37.888 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 400 null application/json; charset=utf-8 37818.1974ms
+2024-12-24 00:45:40.862 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:45:40.867 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:45:40.867 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:45:40.869 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:45:40.869 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:46:02.401 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:46:08.483 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:46:11.567 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:46:11.663 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:48:29.121 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 00:48:29.530 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 00:48:29.533 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 00:48:29.534 +03:00 [INF] Hosting environment: Development
+2024-12-24 00:48:29.535 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 00:48:32.631 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 00:48:33.201 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 582.8738ms
+2024-12-24 00:48:33.223 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 00:48:33.227 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.5508ms
+2024-12-24 00:48:33.274 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 00:48:33.380 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.607ms
+2024-12-24 00:48:33.454 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 00:48:33.757 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 303.3859ms
+2024-12-24 00:48:57.092 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - application/json 26
+2024-12-24 00:48:57.098 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 00:48:57.150 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:48:57.150 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:48:57.252 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:48:57.311 +03:00 [INF] Route matched with {action = "SendOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Boolean]]] SendOtp(System.String) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:50:59.090 +03:00 [INF] Processing SendOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:51:08.453 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__emailOrPhone_0='?' (Size = 4000), @__emailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__emailOrPhone_0 OR [a].[Email] = @__emailOrPhone_0_1
+2024-12-24 00:51:12.836 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:51:12.965 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:51:50.186 +03:00 [INF] OTP sent successfully to zaidsaadedin11@gmail.com
+2024-12-24 00:51:51.859 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:51:53.532 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs) in 176215.4057ms
+2024-12-24 00:51:53.532 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.SendOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:51:55.337 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/SendOtp - 200 null application/json; charset=utf-8 178249.1634ms
+2024-12-24 00:52:36.207 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/otp/VerifyOtp - application/json 67
+2024-12-24 00:52:36.209 +03:00 [INF] CORS policy execution failed.
+2024-12-24 00:52:36.209 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 00:52:36.210 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.VerifyOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:52:36.215 +03:00 [INF] Route matched with {action = "VerifyOtp", controller = "Otp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] VerifyOtp(TurnPoint.Jo.APIs.Common.VerificationsDtos.VerifyOtpDto) on controller TurnPoint.Jo.APIs.Controllers.OtpController (TurnPoint.Jo.APIs).
+2024-12-24 00:52:44.234 +03:00 [INF] Processing VerifyOtp request for zaidsaadedin11@gmail.com
+2024-12-24 00:52:44.291 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__verifyOtpDto_EmailOrPhone_0='?' (Size = 4000), @__verifyOtpDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__verifyOtpDto_EmailOrPhone_0 OR [a].[Email] = @__verifyOtpDto_EmailOrPhone_0_1
+2024-12-24 00:52:44.299 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 00:52:44.310 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p24='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (DbType = DateTime2), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedAt] = @p2, [DateOfBirth] = @p3, [DeletedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [Gender] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Name] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [Otp] = @p14, [OtpExpiresAt] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [SecurityStamp] = @p19, [TwoFactorEnabled] = @p20, [UpdatedAt] = @p21, [UserName] = @p22
+OUTPUT 1
+WHERE [Id] = @p23 AND [ConcurrencyStamp] = @p24;
+2024-12-24 00:52:44.311 +03:00 [INF] OTP verified successfully for zaidsaadedin11@gmail.com
+2024-12-24 00:52:44.312 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 00:52:44.313 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.OtpController.VerifyOtp (TurnPoint.Jo.APIs) in 8097.5819ms
+2024-12-24 00:52:44.313 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.OtpController.VerifyOtp (TurnPoint.Jo.APIs)'
+2024-12-24 00:52:44.313 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/otp/VerifyOtp - 200 null application/json; charset=utf-8 8106.7992ms
+2024-12-24 10:54:40.799 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 10:54:41.412 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-24 10:54:41.419 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 10:54:41.420 +03:00 [INF] Hosting environment: Development
+2024-12-24 10:54:41.421 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-24 10:54:42.983 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-24 10:54:45.456 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 2504.0083ms
+2024-12-24 10:54:45.999 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 10:54:45.999 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-24 10:54:46.046 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 214.9419ms
+2024-12-24 10:54:46.694 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 695.9871ms
+2024-12-24 10:54:46.926 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-24 10:54:47.744 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 818.7636ms
+2024-12-24 10:54:52.957 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 209
+2024-12-24 10:54:52.962 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-24 10:54:53.008 +03:00 [INF] CORS policy execution failed.
+2024-12-24 10:54:53.008 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-24 10:54:53.079 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 10:54:53.126 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-24 10:54:53.901 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 10:54:53.956 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 822.0526ms
+2024-12-24 10:54:53.956 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-24 10:54:53.959 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/problem+json; charset=utf-8 1001.6012ms

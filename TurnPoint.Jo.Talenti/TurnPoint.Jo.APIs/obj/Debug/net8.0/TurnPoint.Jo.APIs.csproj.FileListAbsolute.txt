@@ -621,3 +621,8 @@ C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnP
 C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\obj\Debug\net8.0\TurnPoint.Jo.APIs.pdb
 C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\obj\Debug\net8.0\TurnPoint.Jo.APIs.genruntimeconfig.cache
 C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\obj\Debug\net8.0\ref\TurnPoint.Jo.APIs.dll
+C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\bin\Debug\net8.0\MailKit.dll
+C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\bin\Debug\net8.0\MimeKit.dll
+C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

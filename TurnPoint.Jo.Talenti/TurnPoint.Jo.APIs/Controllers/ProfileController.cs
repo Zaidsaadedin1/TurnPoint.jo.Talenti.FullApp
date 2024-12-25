@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using TurnPoint.Jo.APIs.Interfaceses;
 using TurnPoint.Jo.APIs.Common.ProfileDtos;
@@ -7,7 +6,7 @@ using TurnPoint.Jo.APIs.Common.Shared;
 
 namespace TurnPoint.Jo.APIs.Controllers
 {
-    [Route("api/user")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProfileController : ControllerBase
     {
@@ -20,10 +19,11 @@ namespace TurnPoint.Jo.APIs.Controllers
             _logger = logger;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet("GetUserById")]
         public async Task<ActionResult<GenericResponse<GetUserDto>>> GetUserById([FromQuery] int userId)
         {
+
             _logger.LogInformation("Fetching user with ID {UserId}.", userId);
 
             var response = await _userService.GetUserByIdAsync(userId);
@@ -36,7 +36,7 @@ namespace TurnPoint.Jo.APIs.Controllers
             return Ok(response);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "User")]
         [HttpGet("GetAllUsers")]
         public async Task<ActionResult<GenericResponse<IEnumerable<GetUserDto>>>> GetAllUsers([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {

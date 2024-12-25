@@ -1,9 +1,5 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using TernPoint.Jo.Talenti.DatabaseManager;
 using TurnPoint.Jo.APIs.Common.InterestDtos;
 using TurnPoint.Jo.APIs.Common.Shared;
 using TurnPoint.Jo.APIs.Entities;

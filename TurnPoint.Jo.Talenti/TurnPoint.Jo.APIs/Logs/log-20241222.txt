@@ -1,0 +1,1430 @@
+2024-12-22 13:15:13.553 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 13:15:14.039 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 13:15:14.047 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 13:15:14.048 +03:00 [INF] Hosting environment: Development
+2024-12-22 13:15:14.048 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 13:15:17.013 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 13:15:17.910 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 916.5455ms
+2024-12-22 13:15:17.967 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 13:15:17.978 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 13.1809ms
+2024-12-22 13:15:18.049 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 13:15:18.345 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 295.3209ms
+2024-12-22 13:15:18.992 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 13:15:19.979 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 991.4879ms
+2024-12-22 13:15:42.067 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:15:42.081 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 13:15:42.101 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:15:42.101 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:15:42.104 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:15:42.176 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:15:57.124 +03:00 [INF] Executed DbCommand (118ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:15:57.599 +03:00 [WRN] Login failed for email/phone: zaidsaadedin10@gmail.com. Incorrect password.
+2024-12-22 13:15:57.616 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:15:57.639 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 15456.8316ms
+2024-12-22 13:15:57.640 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:15:57.662 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 400 null application/json; charset=utf-8 15594.9837ms
+2024-12-22 13:16:10.347 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:16:10.351 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:16:10.351 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:16:10.351 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:16:10.351 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:16:10.413 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:16:10.553 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 13:16:10.616 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:16:10.616 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 265.174ms
+2024-12-22 13:16:10.617 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:16:10.617 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 269.6315ms
+2024-12-22 13:21:15.629 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 13:21:15.957 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 13:21:15.962 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 13:21:15.963 +03:00 [INF] Hosting environment: Development
+2024-12-22 13:21:15.963 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 13:21:19.392 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 13:21:19.681 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 298.3542ms
+2024-12-22 13:21:19.700 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 13:21:19.703 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.9326ms
+2024-12-22 13:21:19.729 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 13:21:19.782 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.521ms
+2024-12-22 13:21:19.960 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 13:21:20.128 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 168.5328ms
+2024-12-22 13:21:23.535 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:21:23.544 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 13:21:23.578 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:21:23.579 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:21:23.584 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:21:23.630 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:21:26.591 +03:00 [INF] Executed DbCommand (82ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:21:27.069 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 13:21:27.163 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:21:27.185 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 3548.6759ms
+2024-12-22 13:21:27.186 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:21:27.201 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 3666.0168ms
+2024-12-22 13:29:20.895 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:29:20.900 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:29:20.900 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:29:20.901 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:29:20.901 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:29:21.016 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:29:21.087 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 13:29:21.089 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:29:21.089 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 187.7938ms
+2024-12-22 13:29:21.089 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:29:21.089 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 196.202ms
+2024-12-22 13:29:39.950 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - null null
+2024-12-22 13:29:39.953 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 13:29:39.959 +03:00 [INF] Route matched with {action = "GetInterestById", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]] GetInterestByIdAsync(Int32) on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 13:29:39.995 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__interestId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+WHERE [i].[Id] = @__interestId_0
+2024-12-22 13:29:39.998 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 13:29:40.001 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs) in 42.2649ms
+2024-12-22 13:29:40.001 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 13:29:40.002 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - 200 null application/json; charset=utf-8 51.8233ms
+2024-12-22 13:30:02.541 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 13:30:02.878 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 13:30:02.881 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 13:30:02.882 +03:00 [INF] Hosting environment: Development
+2024-12-22 13:30:02.882 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 13:30:05.991 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 13:30:06.291 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 308.7001ms
+2024-12-22 13:30:06.319 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 13:30:06.322 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.9342ms
+2024-12-22 13:30:06.342 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 13:30:06.393 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.7935ms
+2024-12-22 13:30:06.464 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 13:30:06.654 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.3211ms
+2024-12-22 13:31:51.717 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:31:51.733 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 13:31:51.748 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:31:51.757 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:31:51.758 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 43.0446ms
+2024-12-22 13:31:51.761 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:31:51.765 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 4.697ms
+2024-12-22 13:31:51.767 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:31:58.307 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 13:31:58.311 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 13:31:58.311 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:31:58.312 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - 302 0 null 4.6471ms
+2024-12-22 13:31:58.314 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - null null
+2024-12-22 13:31:58.315 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - 404 0 null 0.8606ms
+2024-12-22 13:31:58.315 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:34:24.368 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:34:24.371 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:34:24.371 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:34:24.372 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:34:24.401 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:34:26.196 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:34:26.480 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 13:34:26.529 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:34:26.541 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 2135.7618ms
+2024-12-22 13:34:26.541 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:34:26.550 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 2181.8325ms
+2024-12-22 13:34:46.180 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:34:46.182 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:34:46.182 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:34:46.182 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 2.721ms
+2024-12-22 13:34:46.190 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:34:46.190 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.4862ms
+2024-12-22 13:34:46.191 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:34:54.920 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=2 - null null
+2024-12-22 13:34:54.921 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:34:54.921 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:34:54.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=2 - 302 0 null 1.4065ms
+2024-12-22 13:34:54.928 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D2 - null null
+2024-12-22 13:34:54.929 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D2 - 404 0 null 0.5075ms
+2024-12-22 13:34:54.929 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:01.517 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=4 - null null
+2024-12-22 13:35:01.517 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:35:01.517 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:35:01.517 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=4 - 302 0 null 1.0005ms
+2024-12-22 13:35:01.528 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D4 - null null
+2024-12-22 13:35:01.532 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D4 - 404 0 null 3.7115ms
+2024-12-22 13:35:01.534 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:03.569 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:35:03.570 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:35:03.570 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:35:03.570 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 1.0848ms
+2024-12-22 13:35:03.575 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:35:03.575 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.5984ms
+2024-12-22 13:35:03.576 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:17.713 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:35:17.713 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:35:17.713 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:35:17.714 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 1.0144ms
+2024-12-22 13:35:17.721 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:35:17.722 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.7045ms
+2024-12-22 13:35:17.722 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:18.477 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:35:18.477 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:35:18.477 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:35:18.477 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 0.6222ms
+2024-12-22 13:35:18.488 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:35:18.490 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 1.814ms
+2024-12-22 13:35:18.490 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:19.478 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:35:19.478 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:35:19.478 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:35:19.478 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 0.6291ms
+2024-12-22 13:35:19.483 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:35:19.483 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.514ms
+2024-12-22 13:35:19.483 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:20.211 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:35:20.212 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:35:20.212 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:35:20.212 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 0.6239ms
+2024-12-22 13:35:20.220 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:35:20.222 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 1.49ms
+2024-12-22 13:35:20.224 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:35:52.260 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 13:35:52.262 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-22 13:35:52.274 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Collections.Generic.IEnumerable`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]]] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 13:35:52.339 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-22 13:35:52.344 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Collections.Generic.IEnumerable`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:35:52.346 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 72.5848ms
+2024-12-22 13:35:52.346 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-22 13:35:52.347 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 200 null application/json; charset=utf-8 86.3243ms
+2024-12-22 13:44:31.727 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 13:44:32.072 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 13:44:32.077 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 13:44:32.078 +03:00 [INF] Hosting environment: Development
+2024-12-22 13:44:32.078 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 13:44:34.229 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:44:34.262 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 13:44:34.303 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:44:34.314 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:44:34.317 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 97.4348ms
+2024-12-22 13:44:34.322 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:44:34.328 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 6.7443ms
+2024-12-22 13:44:34.330 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:44:35.059 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 13:44:35.419 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 359.9147ms
+2024-12-22 13:44:35.455 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 13:44:35.460 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.2044ms
+2024-12-22 13:44:35.489 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 13:44:35.542 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.9494ms
+2024-12-22 13:44:35.637 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 13:44:35.919 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.783ms
+2024-12-22 13:44:42.222 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:44:42.227 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:44:42.228 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:44:42.228 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 5.5539ms
+2024-12-22 13:44:42.232 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:44:42.233 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.5631ms
+2024-12-22 13:44:42.233 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:44:43.097 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:44:43.100 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:44:43.100 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:44:43.100 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 2.9822ms
+2024-12-22 13:44:43.118 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:44:43.119 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.9457ms
+2024-12-22 13:44:43.119 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:44:46.343 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=2 - null null
+2024-12-22 13:44:46.344 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:44:46.344 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:44:46.344 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=2 - 302 0 null 1.1518ms
+2024-12-22 13:44:46.351 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D2 - null null
+2024-12-22 13:44:46.351 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D2 - 404 0 null 0.7443ms
+2024-12-22 13:44:46.351 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:44:50.190 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 13:44:50.191 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 13:44:50.191 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:44:50.191 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - 302 0 null 1.466ms
+2024-12-22 13:44:50.198 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - null null
+2024-12-22 13:44:50.198 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - 404 0 null 0.5519ms
+2024-12-22 13:44:50.198 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:47:45.187 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 13:47:45.512 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 13:47:45.517 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 13:47:45.517 +03:00 [INF] Hosting environment: Development
+2024-12-22 13:47:45.518 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 13:47:48.727 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 13:47:49.070 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 352.4311ms
+2024-12-22 13:47:49.103 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 13:47:49.106 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.4216ms
+2024-12-22 13:47:49.125 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 13:47:49.173 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6517ms
+2024-12-22 13:47:49.236 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 13:47:49.480 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 243.8177ms
+2024-12-22 13:47:50.773 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 13:47:50.778 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 13:47:50.835 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 13:47:50.846 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:47:50.847 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - 302 0 null 73.9822ms
+2024-12-22 13:47:50.851 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - null null
+2024-12-22 13:47:50.855 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - 404 0 null 4.878ms
+2024-12-22 13:47:50.858 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:47:53.525 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 13:47:53.530 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 13:47:53.531 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:47:53.531 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetAllUsers?page=1&pageSize=10 - 302 0 null 6.5079ms
+2024-12-22 13:47:53.534 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - null null
+2024-12-22 13:47:53.535 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - 404 0 null 0.7158ms
+2024-12-22 13:47:53.535 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:47:56.135 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=2 - null null
+2024-12-22 13:47:56.137 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:47:56.138 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:47:56.138 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=2 - 302 0 null 2.8169ms
+2024-12-22 13:47:56.143 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D2 - null null
+2024-12-22 13:47:56.144 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D2 - 404 0 null 0.896ms
+2024-12-22 13:47:56.144 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:48:26.336 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 76
+2024-12-22 13:48:26.338 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:48:26.338 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:48:26.340 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:48:26.366 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:48:26.681 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-22 13:48:26.712 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 342.9428ms
+2024-12-22 13:48:26.712 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:48:26.713 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 400 null application/problem+json; charset=utf-8 377.3226ms
+2024-12-22 13:48:48.547 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:48:48.554 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:48:48.554 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:48:48.555 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:48:48.555 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:48:50.093 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:48:50.357 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 13:48:50.424 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:48:50.428 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 1872.0667ms
+2024-12-22 13:48:50.428 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:48:50.438 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 1891.5935ms
+2024-12-22 13:49:45.772 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:49:45.775 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:49:45.775 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:49:45.775 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 3.3098ms
+2024-12-22 13:49:45.783 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:49:45.786 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 2.458ms
+2024-12-22 13:49:45.786 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:51:50.274 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - application/json 58
+2024-12-22 13:51:50.280 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:51:50.280 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:51:50.280 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 6.0363ms
+2024-12-22 13:51:50.284 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:51:50.285 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.3804ms
+2024-12-22 13:51:50.285 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:52:17.022 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - application/json null
+2024-12-22 13:52:17.023 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:52:17.023 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:52:17.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 0.6947ms
+2024-12-22 13:52:17.024 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:52:17.025 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.332ms
+2024-12-22 13:52:17.025 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 13:57:17.253 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 13:57:17.588 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 13:57:17.592 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 13:57:17.593 +03:00 [INF] Hosting environment: Development
+2024-12-22 13:57:17.593 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 13:57:20.531 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 13:57:20.847 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 326.4123ms
+2024-12-22 13:57:20.868 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 13:57:20.871 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.9825ms
+2024-12-22 13:57:20.896 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 13:57:20.962 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.7865ms
+2024-12-22 13:57:21.017 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 13:57:21.215 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 197.7021ms
+2024-12-22 13:57:31.377 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 13:57:31.381 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 13:57:31.402 +03:00 [INF] CORS policy execution failed.
+2024-12-22 13:57:31.403 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 13:57:31.416 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:57:31.441 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 13:57:33.378 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 13:57:33.801 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 13:57:33.872 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:57:33.887 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 2442.1669ms
+2024-12-22 13:57:33.888 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 13:57:33.900 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 2523.4897ms
+2024-12-22 13:57:50.701 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 13:57:50.704 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-22 13:57:50.710 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Collections.Generic.IEnumerable`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]]] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 13:57:50.779 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-22 13:57:50.782 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Collections.Generic.IEnumerable`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 13:57:50.785 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 75.2401ms
+2024-12-22 13:57:50.785 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-22 13:57:50.785 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 200 null application/json; charset=utf-8 84.3796ms
+2024-12-22 13:58:00.698 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 13:58:00.706 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 13:58:00.714 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 13:58:00.714 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 15.9212ms
+2024-12-22 13:58:00.716 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 13:58:00.717 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 1.1753ms
+2024-12-22 13:58:00.717 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:03:46.650 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:03:46.899 +03:00 [FTL] Application startup exception
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-12-22 14:03:46.984 +03:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-12-22 14:43:27.132 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:43:27.602 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:43:27.607 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:43:27.608 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:43:27.608 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:43:30.210 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:43:30.715 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 523.8103ms
+2024-12-22 14:43:30.771 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:43:30.775 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.7371ms
+2024-12-22 14:43:30.800 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:43:30.860 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.2418ms
+2024-12-22 14:43:30.969 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:43:31.290 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 320.8449ms
+2024-12-22 14:44:02.293 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:44:02.303 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:44:02.362 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 14:44:02.369 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:44:02.370 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 77.6105ms
+2024-12-22 14:44:02.373 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:44:02.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 5.6277ms
+2024-12-22 14:44:02.380 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:45:06.398 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:45:06.948 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:45:06.956 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:45:06.957 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:45:06.957 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:45:07.701 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:45:08.218 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 536.782ms
+2024-12-22 14:45:08.261 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:45:08.266 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.471ms
+2024-12-22 14:45:08.294 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:45:08.369 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.0131ms
+2024-12-22 14:45:08.486 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:45:08.815 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 328.6115ms
+2024-12-22 14:45:28.010 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:45:28.016 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:45:28.069 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:45:28.078 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:45:28.079 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 69.6763ms
+2024-12-22 14:45:28.082 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:45:28.086 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 3.8991ms
+2024-12-22 14:45:28.087 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:45:40.017 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:45:40.021 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:45:40.022 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:45:40.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 5.7302ms
+2024-12-22 14:45:40.033 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:45:40.034 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.7111ms
+2024-12-22 14:45:40.034 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:45:42.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:45:42.351 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:45:42.352 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:45:42.352 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 3.3053ms
+2024-12-22 14:45:42.357 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:45:42.358 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 1.024ms
+2024-12-22 14:45:42.358 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:46:05.144 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:46:05.728 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:46:05.734 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:46:05.735 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:46:05.735 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:46:05.887 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:46:05.944 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:46:06.021 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 14:46:06.077 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 14:46:06.229 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:46:06.738 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 509.0653ms
+2024-12-22 14:46:06.797 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:46:06.804 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.4702ms
+2024-12-22 14:46:06.831 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:46:06.923 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.5499ms
+2024-12-22 14:46:14.468 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:46:14.468 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 14:46:14.685 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 216.8936ms
+2024-12-22 14:46:16.848 +03:00 [INF] Executed DbCommand (92ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 14:46:17.215 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 14:46:17.218 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 14:46:17.237 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 14:46:17.290 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 11206.6619ms
+2024-12-22 14:46:17.293 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 14:46:17.312 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 200 null application/json; charset=utf-8 11441.3075ms
+2024-12-22 14:48:25.804 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:48:25.817 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 14:48:25.818 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 14:48:29.519 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 14:48:29.585 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 14:48:29.598 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 14:48:29.599 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 14:48:29.599 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 14:48:29.600 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 3781.9208ms
+2024-12-22 14:48:29.600 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 14:48:29.600 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 200 null application/json; charset=utf-8 3797.4046ms
+2024-12-22 14:49:06.246 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:49:06.582 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:49:06.586 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:49:06.587 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:49:06.588 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:49:09.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:49:10.265 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 539.7764ms
+2024-12-22 14:49:10.307 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:49:10.315 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.3889ms
+2024-12-22 14:49:10.389 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:49:10.456 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.9848ms
+2024-12-22 14:49:10.585 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:49:10.916 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 331.3709ms
+2024-12-22 14:49:12.036 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:49:12.042 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:49:12.107 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:49:12.120 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:49:12.121 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 84.997ms
+2024-12-22 14:49:12.131 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:49:12.138 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 7.1734ms
+2024-12-22 14:49:12.141 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:54:04.679 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:54:04.685 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:54:04.686 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:54:04.692 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 10.9738ms
+2024-12-22 14:54:04.699 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:54:04.699 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.5621ms
+2024-12-22 14:54:04.700 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:54:24.539 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:54:24.541 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:54:24.541 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:54:24.541 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 302 0 null 2.5911ms
+2024-12-22 14:54:24.548 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:54:24.549 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2Fuser%2FGetUserById%3FuserId%3D1 - 404 0 null 0.9994ms
+2024-12-22 14:54:24.550 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:55:15.489 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:55:15.818 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:55:15.822 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:55:15.823 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:55:15.823 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:55:18.763 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:55:19.049 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 297.6751ms
+2024-12-22 14:55:19.075 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:55:19.078 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.9312ms
+2024-12-22 14:55:19.094 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:55:19.137 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.2139ms
+2024-12-22 14:55:19.208 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:55:19.447 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 239.627ms
+2024-12-22 14:55:21.305 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:55:21.309 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:55:21.363 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 58.7829ms
+2024-12-22 14:55:21.365 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 14:55:25.612 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:55:25.615 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 3.1948ms
+2024-12-22 14:55:25.615 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 14:55:26.394 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 14:55:26.398 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 3.7659ms
+2024-12-22 14:55:26.398 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 14:55:38.654 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 14:55:38.657 +03:00 [INF] CORS policy execution failed.
+2024-12-22 14:55:38.657 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 14:55:38.659 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 14:55:38.705 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 14:55:41.311 +03:00 [INF] Executed DbCommand (130ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 14:55:41.797 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 14:55:41.877 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 14:55:41.898 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 3185.9372ms
+2024-12-22 14:55:41.899 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 14:55:41.915 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 3261.0215ms
+2024-12-22 14:56:07.004 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 14:56:07.024 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:56:07.034 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:56:07.034 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 302 0 null 30.7703ms
+2024-12-22 14:56:07.038 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:56:07.038 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - 404 0 null 0.4791ms
+2024-12-22 14:56:07.038 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:57:30.703 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:57:31.062 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:57:31.066 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:57:31.067 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:57:31.067 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:57:31.477 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:57:31.908 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 442.9278ms
+2024-12-22 14:57:31.945 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:57:31.949 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.2252ms
+2024-12-22 14:57:31.992 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:57:32.066 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.489ms
+2024-12-22 14:57:32.184 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:57:32.439 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 255.0355ms
+2024-12-22 14:57:34.209 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 14:57:34.214 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:57:34.276 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:57:34.291 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:57:34.292 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 302 0 null 83.1772ms
+2024-12-22 14:57:34.295 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:57:34.302 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - 404 0 null 6.6415ms
+2024-12-22 14:57:34.306 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:57:37.736 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 14:57:37.740 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:57:37.741 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:57:37.741 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 302 0 null 5.2373ms
+2024-12-22 14:57:37.743 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 14:57:37.744 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - 404 0 null 0.6091ms
+2024-12-22 14:57:37.744 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:58:04.870 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - application/json null
+2024-12-22 14:58:04.882 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 10.629ms
+2024-12-22 14:58:04.883 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 14:58:25.562 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 14:58:25.571 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 14:58:25.571 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:58:25.572 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 302 0 null 11.237ms
+2024-12-22 14:58:25.578 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - null null
+2024-12-22 14:58:25.579 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetAllUsers%3Fpage%3D1%26pageSize%3D10 - 404 0 null 0.7491ms
+2024-12-22 14:58:25.579 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 14:58:45.304 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 14:58:45.306 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-22 14:58:45.334 +03:00 [INF] Route matched with {action = "GetAllInterests", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Collections.Generic.IEnumerable`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]]] GetAllInterestsAsync() on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 14:58:48.218 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+2024-12-22 14:58:48.287 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Collections.Generic.IEnumerable`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 14:58:48.311 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs) in 2969.9668ms
+2024-12-22 14:58:48.312 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetAllInterestsAsync (TurnPoint.Jo.APIs)'
+2024-12-22 14:58:48.330 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 200 null application/json; charset=utf-8 3025.7502ms
+2024-12-22 14:59:31.940 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 14:59:32.271 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 14:59:32.275 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 14:59:32.276 +03:00 [INF] Hosting environment: Development
+2024-12-22 14:59:32.276 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 14:59:32.729 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 14:59:33.186 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 467.5477ms
+2024-12-22 14:59:33.227 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 14:59:33.232 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.6692ms
+2024-12-22 14:59:33.266 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 14:59:33.324 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.3464ms
+2024-12-22 14:59:33.426 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 14:59:33.727 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 301.0063ms
+2024-12-22 14:59:38.915 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 14:59:38.920 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 14:59:38.979 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 14:59:38.984 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 14:59:38.985 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 302 0 null 69.7618ms
+2024-12-22 14:59:38.988 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - null null
+2024-12-22 14:59:38.995 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - 404 0 null 6.4116ms
+2024-12-22 14:59:38.997 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 15:00:38.372 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:00:38.741 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:00:38.746 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:00:38.747 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:00:38.747 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:00:40.437 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:00:40.845 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 418.4649ms
+2024-12-22 15:00:40.890 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:00:40.895 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.6778ms
+2024-12-22 15:00:40.915 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 15:00:40.986 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.1824ms
+2024-12-22 15:00:41.053 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 15:00:41.341 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 288.699ms
+2024-12-22 15:00:42.407 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 15:00:42.413 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:00:42.486 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:00:42.495 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 15:00:42.496 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 302 0 null 88.5315ms
+2024-12-22 15:00:42.500 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - null null
+2024-12-22 15:00:42.505 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - 404 0 null 5.6134ms
+2024-12-22 15:00:42.508 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 15:00:44.438 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 15:00:44.442 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:00:44.443 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 15:00:44.443 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 302 0 null 5.3344ms
+2024-12-22 15:00:44.449 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - null null
+2024-12-22 15:00:44.450 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - 404 0 null 0.8155ms
+2024-12-22 15:00:44.450 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 15:05:12.721 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:05:13.213 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:05:13.217 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:05:13.218 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:05:13.218 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:05:14.726 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:05:15.210 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 500.2882ms
+2024-12-22 15:05:15.282 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:05:15.286 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.0626ms
+2024-12-22 15:05:15.356 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 15:05:15.455 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.5221ms
+2024-12-22 15:05:15.596 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 15:05:15.919 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 323.5994ms
+2024-12-22 15:05:24.624 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 15:05:24.628 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:05:24.686 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:05:24.692 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 15:05:24.693 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 302 0 null 69.2809ms
+2024-12-22 15:05:24.697 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - null null
+2024-12-22 15:05:24.700 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - 404 0 null 3.6107ms
+2024-12-22 15:05:24.704 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 15:05:35.276 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - null null
+2024-12-22 15:05:35.280 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 15:05:35.307 +03:00 [INF] Route matched with {action = "GetInterestById", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]] GetInterestByIdAsync(Int32) on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 15:05:36.903 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__interestId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+WHERE [i].[Id] = @__interestId_0
+2024-12-22 15:05:36.941 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 15:05:36.955 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs) in 1644.5074ms
+2024-12-22 15:05:36.955 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 15:05:36.965 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - 200 null application/json; charset=utf-8 1688.8651ms
+2024-12-22 15:05:51.947 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:05:51.950 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:05:51.951 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 15:05:51.951 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 302 0 null 3.9554ms
+2024-12-22 15:05:51.957 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - null null
+2024-12-22 15:05:51.957 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FProfile%2FGetUserById%3FuserId%3D1 - 404 0 null 0.5889ms
+2024-12-22 15:05:51.957 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 15:06:34.170 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:06:34.702 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:06:34.708 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:06:34.710 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:06:34.710 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:06:35.765 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - application/json 209
+2024-12-22 15:06:35.800 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:06:35.830 +03:00 [INF] CORS policy execution failed.
+2024-12-22 15:06:35.831 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 15:06:35.851 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-22 15:06:35.891 +03:00 [INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto]]] Register(TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 15:06:54.088 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:06:54.353 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 3311.5279ms
+2024-12-22 15:06:57.156 +03:00 [INF] Executed DbCommand (128ms) [Parameters=[@__registerUserDto_Email_0='?' (Size = 256), @__registerUserDto_PhoneNumber_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__registerUserDto_Email_0 OR [a].[PhoneNumber] = @__registerUserDto_PhoneNumber_1
+2024-12-22 15:06:57.215 +03:00 [WRN] Email or phone is already taken
+2024-12-22 15:06:57.232 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.AuthDtos.RegisterUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 15:06:57.272 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs) in 21362.224ms
+2024-12-22 15:06:57.273 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Register (TurnPoint.Jo.APIs)'
+2024-12-22 15:06:57.296 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Register - 400 null application/json; charset=utf-8 21544.7211ms
+2024-12-22 15:10:43.696 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:10:44.425 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:10:44.432 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:10:44.433 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:10:44.434 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:10:45.652 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:10:46.450 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 825.0987ms
+2024-12-22 15:10:46.527 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:10:46.535 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 10.6832ms
+2024-12-22 15:10:46.566 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 15:10:46.731 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 165.141ms
+2024-12-22 15:10:46.904 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 15:10:47.348 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 444.3807ms
+2024-12-22 15:11:00.362 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:11:00.367 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:11:00.505 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:11:00.511 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 15:11:00.512 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 401 0 null 149.5149ms
+2024-12-22 15:11:37.769 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - null null
+2024-12-22 15:11:37.787 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:11:37.792 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-12-22 15:11:37.793 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetAllInterests - 302 0 null 24.5251ms
+2024-12-22 15:11:37.795 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - null null
+2024-12-22 15:11:37.797 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/Account/Login?ReturnUrl=%2Fapi%2FInterests%2FGetAllInterests - 404 0 null 1.7304ms
+2024-12-22 15:11:37.799 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/Account/Login, Response status code: 404
+2024-12-22 15:19:54.726 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:19:55.063 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:19:55.068 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:19:55.068 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:19:55.069 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:19:55.491 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:19:55.955 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 478.9835ms
+2024-12-22 15:19:56.009 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:19:56.014 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.2038ms
+2024-12-22 15:19:56.039 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 15:19:56.121 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.6447ms
+2024-12-22 15:19:56.244 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 15:19:56.546 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 301.9574ms
+2024-12-22 15:20:09.579 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:20:09.584 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:20:09.672 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:20:09.676 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 15:20:09.676 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 401 0 null 97.011ms
+2024-12-22 15:20:38.929 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 15:20:38.938 +03:00 [INF] CORS policy execution failed.
+2024-12-22 15:20:38.938 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 15:20:38.942 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 15:20:38.971 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 15:20:41.085 +03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 15:20:41.557 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 15:20:41.649 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 15:20:41.673 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 2697.0186ms
+2024-12-22 15:20:41.674 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 15:20:41.692 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 2763.7601ms
+2024-12-22 15:21:10.076 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:21:10.135 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 15:21:10.139 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 15:21:16.249 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 15:21:16.337 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 15:21:16.371 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 15:21:16.372 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 15:21:16.373 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 15:21:16.385 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 6246.2757ms
+2024-12-22 15:21:16.386 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 15:21:16.386 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 200 null application/json; charset=utf-8 6310.8975ms
+2024-12-22 15:21:47.365 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:21:48.063 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:21:48.072 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:21:48.074 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:21:48.074 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:21:49.471 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:21:50.053 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 598.7825ms
+2024-12-22 15:21:50.098 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:21:50.103 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.6665ms
+2024-12-22 15:21:50.128 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 15:21:50.217 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.2009ms
+2024-12-22 15:21:50.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 15:21:50.765 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 425.3503ms
+2024-12-22 15:21:51.575 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:21:51.582 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:21:51.953 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 15:21:51.958 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 15:21:51.959 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 383.8736ms
+2024-12-22 15:34:43.816 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:34:43.824 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 15:34:43.824 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 15:34:43.824 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 8.7072ms
+2024-12-22 15:34:57.970 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 15:34:57.974 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 15:34:57.974 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 15:34:57.974 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 4.0471ms
+2024-12-22 15:40:28.403 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:40:28.823 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 15:40:28.832 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:40:28.834 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:40:28.835 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 15:40:29.504 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 15:40:30.257 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 777.9354ms
+2024-12-22 15:40:30.316 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:40:30.323 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.4164ms
+2024-12-22 15:40:30.360 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 15:40:30.493 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.9108ms
+2024-12-22 15:40:30.661 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 15:40:30.988 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 327.0247ms
+2024-12-22 15:40:33.521 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 15:40:33.527 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 15:40:33.776 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 15:40:33.779 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 15:40:33.779 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 258.0862ms
+2024-12-22 15:40:55.003 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 15:40:55.010 +03:00 [INF] CORS policy execution failed.
+2024-12-22 15:40:55.010 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 15:40:55.028 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 15:40:55.070 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 15:40:58.154 +03:00 [INF] Executed DbCommand (92ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 15:40:58.663 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 15:40:58.723 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 15:40:58.750 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 3671.4853ms
+2024-12-22 15:40:58.752 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 15:40:58.774 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 3772.0418ms
+2024-12-22 15:43:12.731 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:43:12.744 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 15:43:12.752 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 15:43:12.752 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 20.8275ms
+2024-12-22 15:45:45.188 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - application/json null
+2024-12-22 15:45:45.199 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-22 15:45:45.217 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-22 15:45:45.217 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 29.2221ms
+2024-12-22 15:45:45.217 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 15:47:42.355 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 15:47:42.365 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 9.9462ms
+2024-12-22 15:47:42.365 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 15:47:49.335 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 15:47:49.336 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 0.8777ms
+2024-12-22 15:47:49.336 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 15:47:50.351 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 15:47:50.352 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 1.3866ms
+2024-12-22 15:47:50.353 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 15:47:51.255 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - null null
+2024-12-22 15:47:51.256 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/user/GetUserById?userId=1 - 404 0 null 1.1283ms
+2024-12-22 15:47:51.257 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/api/user/GetUserById, Response status code: 404
+2024-12-22 15:48:19.864 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 15:48:19.904 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 15:48:19.905 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 15:48:19.905 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 40.7064ms
+2024-12-22 16:06:24.231 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:06:24.259 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:06:24.259 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:06:24.259 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 28.3344ms
+2024-12-22 16:07:07.868 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 16:07:08.342 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 16:07:08.348 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 16:07:08.349 +03:00 [INF] Hosting environment: Development
+2024-12-22 16:07:08.350 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 16:07:09.246 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 16:07:09.916 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 694.5094ms
+2024-12-22 16:07:09.981 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 16:07:09.986 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.8426ms
+2024-12-22 16:07:10.010 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 16:07:10.135 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.6767ms
+2024-12-22 16:07:10.237 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 16:07:10.601 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 363.7287ms
+2024-12-22 16:07:22.087 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:22.092 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 16:07:22.309 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:22.313 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:22.313 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 226.0268ms
+2024-12-22 16:07:24.401 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:24.409 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:24.410 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:24.410 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 8.8323ms
+2024-12-22 16:07:24.589 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:24.592 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:24.593 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:24.593 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 3.3644ms
+2024-12-22 16:07:24.770 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:24.771 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:24.771 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:24.771 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 0.8777ms
+2024-12-22 16:07:24.944 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:24.945 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:24.945 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:24.946 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 1.3209ms
+2024-12-22 16:07:25.112 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:25.112 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:25.112 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:25.113 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 1.017ms
+2024-12-22 16:07:25.296 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:07:25.297 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:07:25.297 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:07:25.297 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 1.3973ms
+2024-12-22 16:07:43.665 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 16:07:43.667 +03:00 [INF] CORS policy execution failed.
+2024-12-22 16:07:43.667 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 16:07:43.672 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 16:07:43.705 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 16:07:46.579 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 16:07:47.089 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 16:07:47.129 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 16:07:47.154 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 3441.012ms
+2024-12-22 16:07:47.155 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 16:07:47.169 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 3504.9048ms
+2024-12-22 16:08:07.402 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:08:07.412 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-12-22 16:08:07.412 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:08:07.412 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 403 0 null 11.7971ms
+2024-12-22 16:35:00.364 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 16:35:00.765 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 16:35:00.770 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 16:35:00.772 +03:00 [INF] Hosting environment: Development
+2024-12-22 16:35:00.772 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 16:35:01.459 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 16:35:02.055 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 616.8561ms
+2024-12-22 16:35:02.095 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 16:35:02.099 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.8826ms
+2024-12-22 16:35:02.141 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 16:35:02.214 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.646ms
+2024-12-22 16:35:02.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 16:35:02.696 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 356.3106ms
+2024-12-22 16:38:24.276 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 16:38:24.280 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 16:38:24.497 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 16:38:24.528 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 16:38:24.837 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 16:38:26.965 +03:00 [INF] Executed DbCommand (108ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 16:38:27.346 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 16:38:27.349 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 16:38:27.363 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 16:38:27.404 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 2870.5545ms
+2024-12-22 16:38:27.405 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 16:38:27.423 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 200 null application/json; charset=utf-8 3147.8002ms
+2024-12-22 16:38:34.473 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 16:38:34.487 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-22 16:38:34.493 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 16:38:34.494 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 20.3047ms
+2024-12-22 17:08:15.139 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:08:15.612 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 17:08:15.619 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:08:15.620 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:08:15.620 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 17:08:17.686 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 17:08:18.197 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 536.2111ms
+2024-12-22 17:08:18.231 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:08:18.235 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.2773ms
+2024-12-22 17:08:18.270 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 17:08:18.344 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.7702ms
+2024-12-22 17:08:18.466 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 17:08:18.820 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 353.5847ms
+2024-12-22 17:08:26.382 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - null null
+2024-12-22 17:08:26.385 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 17:08:26.500 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 17:08:26.536 +03:00 [INF] Route matched with {action = "GetInterestById", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]] GetInterestByIdAsync(Int32) on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 17:08:29.086 +03:00 [INF] Executed DbCommand (107ms) [Parameters=[@__interestId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+WHERE [i].[Id] = @__interestId_0
+2024-12-22 17:08:29.149 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 17:08:29.171 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs) in 2628.8043ms
+2024-12-22 17:08:29.172 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 17:08:29.186 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - 200 null application/json; charset=utf-8 2804.333ms
+2024-12-22 17:08:37.530 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 17:08:37.539 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 17:08:37.543 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 17:08:37.544 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 401 0 null 13.3908ms
+2024-12-22 17:09:19.190 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 17:09:19.192 +03:00 [INF] CORS policy execution failed.
+2024-12-22 17:09:19.193 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 17:09:19.195 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 17:09:19.199 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 17:09:19.520 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 17:09:19.756 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 17:09:19.793 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 17:09:19.796 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 597.1898ms
+2024-12-22 17:09:19.796 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 17:09:19.797 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 607.0328ms
+2024-12-22 17:09:57.552 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - null null
+2024-12-22 17:09:57.618 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 17:09:57.618 +03:00 [INF] Route matched with {action = "GetInterestById", controller = "Interests"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto]]] GetInterestByIdAsync(Int32) on controller TurnPoint.Jo.APIs.Controllers.InterestsController (TurnPoint.Jo.APIs).
+2024-12-22 17:09:57.699 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__interestId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Name]
+FROM [Interests] AS [i]
+WHERE [i].[Id] = @__interestId_0
+2024-12-22 17:09:57.700 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.InterestDtos.GetInterestDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 17:09:57.700 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs) in 82.1915ms
+2024-12-22 17:09:57.700 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.InterestsController.GetInterestByIdAsync (TurnPoint.Jo.APIs)'
+2024-12-22 17:09:57.700 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Interests/GetInterestById?interestId=1 - 200 null application/json; charset=utf-8 148.4859ms
+2024-12-22 17:10:01.541 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 17:10:01.545 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 17:10:01.550 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 17:10:01.555 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 17:10:01.592 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 17:10:01.629 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:10:01.630 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 17:10:01.630 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 17:10:01.655 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 104.9936ms
+2024-12-22 17:10:01.655 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 17:10:01.655 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 200 null application/json; charset=utf-8 114.3476ms
+2024-12-22 17:10:15.379 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 17:10:15.387 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 17:10:15.387 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 17:10:15.388 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 17:10:15.394 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 17:10:15.397 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:10:15.397 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 17:10:15.397 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 17:10:15.398 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 10.9262ms
+2024-12-22 17:10:15.398 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 17:10:15.398 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 200 null application/json; charset=utf-8 19.6133ms
+2024-12-22 17:10:19.999 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:10:20.002 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:10:20.005 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:10:20.005 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 5.5235ms
+2024-12-22 17:10:21.493 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:10:21.494 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:10:21.494 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:10:21.494 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 1.1856ms
+2024-12-22 17:16:07.257 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:16:07.639 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 17:16:07.647 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:16:07.648 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:16:07.648 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 17:16:08.136 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 17:16:08.663 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 545.5188ms
+2024-12-22 17:16:08.714 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:16:08.719 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.1152ms
+2024-12-22 17:16:08.750 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 17:16:08.843 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.1439ms
+2024-12-22 17:16:08.938 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 17:16:09.259 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 320.4808ms
+2024-12-22 17:16:10.743 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:16:10.749 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 17:16:10.988 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (USER)
+2024-12-22 17:16:10.992 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:16:10.993 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 249.8669ms
+2024-12-22 17:22:13.114 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:22:13.567 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 17:22:13.572 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:22:13.573 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:22:13.573 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 17:22:15.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 17:22:15.773 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 442.3857ms
+2024-12-22 17:22:15.797 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:22:15.801 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.8236ms
+2024-12-22 17:22:15.834 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 17:22:15.902 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.8819ms
+2024-12-22 17:22:15.996 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 17:22:16.240 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 243.8012ms
+2024-12-22 17:22:20.248 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:22:20.255 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 17:22:20.458 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:22:20.460 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:22:20.460 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 212.1934ms
+2024-12-22 17:23:48.269 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:23:48.807 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 17:23:48.815 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:23:48.816 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:23:48.817 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 17:23:49.641 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 17:23:50.350 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 736.3412ms
+2024-12-22 17:23:50.395 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:23:50.399 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.7709ms
+2024-12-22 17:23:50.455 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 17:23:50.570 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 115.4857ms
+2024-12-22 17:23:50.724 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 17:23:51.060 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 336.0906ms
+2024-12-22 17:23:52.694 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:23:52.785 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 17:23:52.968 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:23:52.971 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:23:52.972 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 278.2917ms
+2024-12-22 17:26:48.486 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:26:49.163 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-22 17:26:49.171 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:26:49.172 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:26:49.172 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-22 17:26:51.179 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-22 17:26:51.840 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 684.3748ms
+2024-12-22 17:26:51.984 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:26:51.990 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 11.4702ms
+2024-12-22 17:26:52.031 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-22 17:26:52.827 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 796.7294ms
+2024-12-22 17:26:54.230 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-22 17:26:54.576 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 345.7766ms
+2024-12-22 17:26:54.753 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:26:54.891 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-22 17:26:55.148 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:26:55.152 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:26:55.153 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 399.9774ms
+2024-12-22 17:27:01.314 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:27:01.325 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:27:01.325 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:27:01.326 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 11.0807ms
+2024-12-22 17:27:03.534 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:27:03.537 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:27:03.538 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:27:03.538 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 3.936ms
+2024-12-22 17:27:03.925 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:27:03.926 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:27:03.926 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:27:03.927 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 1.6938ms
+2024-12-22 17:27:04.106 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:27:04.108 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:27:04.108 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:27:04.108 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 2.2487ms
+2024-12-22 17:27:04.311 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:27:04.313 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2024-12-22 17:27:04.313 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-22 17:27:04.313 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 403 0 null 2.1795ms
+2024-12-22 17:27:08.451 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - application/json 75
+2024-12-22 17:27:08.455 +03:00 [INF] CORS policy execution failed.
+2024-12-22 17:27:08.455 +03:00 [INF] Request origin http://localhost:5148 does not have permission to access the resource.
+2024-12-22 17:27:08.461 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 17:27:08.507 +03:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.String]]] Login(TurnPoint.Jo.APIs.Common.AuthDtos.LoginUserDto) on controller TurnPoint.Jo.APIs.Controllers.AuthenticationController (TurnPoint.Jo.APIs).
+2024-12-22 17:27:10.686 +03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__loginUserDto_EmailOrPhone_0='?' (Size = 4000), @__loginUserDto_EmailOrPhone_0_1='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[PhoneNumber] = @__loginUserDto_EmailOrPhone_0 OR [a].[Email] = @__loginUserDto_EmailOrPhone_0_1
+2024-12-22 17:27:11.025 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-22 17:27:11.047 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 17:27:11.062 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs) in 2549.7279ms
+2024-12-22 17:27:11.062 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.AuthenticationController.Login (TurnPoint.Jo.APIs)'
+2024-12-22 17:27:11.073 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5148/api/Authentication/Login - 200 null application/json; charset=utf-8 2622.381ms
+2024-12-22 17:27:34.107 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - null null
+2024-12-22 17:27:34.118 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 17:27:34.125 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]] GetUserById(Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 17:27:34.139 +03:00 [INF] Fetching user with ID 1.
+2024-12-22 17:27:34.242 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-22 17:27:34.288 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:34.289 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 17:27:34.290 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 17:27:34.309 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs) in 183.7807ms
+2024-12-22 17:27:34.309 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetUserById (TurnPoint.Jo.APIs)'
+2024-12-22 17:27:34.309 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetUserById?userId=1 - 200 null application/json; charset=utf-8 202.7798ms
+2024-12-22 17:27:40.120 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - null null
+2024-12-22 17:27:40.121 +03:00 [INF] Executing endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-22 17:27:40.125 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[System.Collections.Generic.IEnumerable`1[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto]]]] GetAllUsers(Int32, Int32) on controller TurnPoint.Jo.APIs.Controllers.ProfileController (TurnPoint.Jo.APIs).
+2024-12-22 17:27:42.457 +03:00 [INF] Fetching users with pagination. Page: 1, PageSize: 10.
+2024-12-22 17:27:42.503 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[DateOfBirth], [a].[DeletedAt], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[Otp], [a].[OtpExpiresAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-12-22 17:27:42.523 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:42.523 +03:00 [INF] Retrieved 1 interests for user with ID 1.
+2024-12-22 17:27:42.525 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:42.525 +03:00 [INF] Retrieved 0 interests for user with ID 2.
+2024-12-22 17:27:42.527 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:42.527 +03:00 [INF] Retrieved 3 interests for user with ID 3.
+2024-12-22 17:27:42.529 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:42.530 +03:00 [INF] Retrieved 0 interests for user with ID 4.
+2024-12-22 17:27:42.531 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:42.531 +03:00 [INF] Retrieved 0 interests for user with ID 5.
+2024-12-22 17:27:42.532 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i0].[Id], [i0].[Name]
+FROM [InterestsLookupUsers] AS [i]
+INNER JOIN [Interests] AS [i0] ON [i].[InterestId] = [i0].[Id]
+WHERE [i].[UserId] = @__userId_0
+2024-12-22 17:27:42.533 +03:00 [INF] Retrieved 0 interests for user with ID 6.
+2024-12-22 17:27:42.535 +03:00 [INF] Executing OkObjectResult, writing value of type 'TurnPoint.Jo.APIs.Common.Shared.GenericResponse`1[[System.Collections.Generic.IEnumerable`1[[TurnPoint.Jo.APIs.Common.ProfileDtos.GetUserDto, TurnPoint.Jo.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-22 17:27:42.538 +03:00 [INF] Executed action TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs) in 2412.4906ms
+2024-12-22 17:27:42.538 +03:00 [INF] Executed endpoint 'TurnPoint.Jo.APIs.Controllers.ProfileController.GetAllUsers (TurnPoint.Jo.APIs)'
+2024-12-22 17:27:42.538 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/api/Profile/GetAllUsers?page=1&pageSize=10 - 200 null application/json; charset=utf-8 2418.3007ms

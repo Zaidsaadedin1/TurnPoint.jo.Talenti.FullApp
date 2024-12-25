@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{070477C8-773F-4FF7-A135-73BA7D100AD6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{2DF107D2-AAE7-43FB-AF7D-34025FC6F86A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurnPoint.Jo.APIs", "TurnPoint.Jo.APIs\TurnPoint.Jo.APIs.csproj", "{66A0CC40-8097-45D7-85C1-010CBD6DF9DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TernPoint.Jo.Talenti.DatabaseManager", "TernPoint.Jo.Talenti.DatabaseManager\TernPoint.Jo.Talenti.DatabaseManager.csproj", "{9D6D37A6-134D-4ABC-9658-F54B40CC99FE}"
@@ -39,10 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{2DF107D2-AAE7-43FB-AF7D-34025FC6F86A} = {070477C8-773F-4FF7-A135-73BA7D100AD6}
-		{66A0CC40-8097-45D7-85C1-010CBD6DF9DB} = {2DF107D2-AAE7-43FB-AF7D-34025FC6F86A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD78AA2B-8786-4B14-B8A1-44EB17E60EFA}

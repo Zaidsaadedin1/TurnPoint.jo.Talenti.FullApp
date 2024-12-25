@@ -11,7 +11,8 @@ using TurnPoint.Jo.APIs.Services;
 using TurnPoint.Jo.APIs.Validators.AuthenticationValidators;
 using FluentValidation.AspNetCore;
 using TurnPoint.Jo.APIs.Validators;
-using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -114,10 +115,14 @@ builder.Services.AddCors(options =>
 
 
 // Configure authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
+builder.Services.AddAuthentication(options => {
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+ .AddJwtBearer(options =>
     {
-        var secretKey = builder.Configuration["JwtSettings:SecretKey"];
+        var secretKey = builder.Configuration["JwtSettings:SecretKey"]; 
         if (string.IsNullOrEmpty(secretKey))
         {
             throw new ArgumentNullException("JwtSettings:SecretKey", "JWT secret key is missing.");
@@ -131,19 +136,41 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["JwtSettings:Issuer"], 
             ValidAudience = builder.Configuration["JwtSettings:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"])),
+            RoleClaimType = "Roles"
         };
     });
 
-// Add authorization
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
-    options.AddPolicy("User", policy => policy.RequireRole("User"));
-});
 
 var app = builder.Build();
+app.Use(async (context, next) =>
+{
+    if (context.Request.Headers.ContainsKey("Authorization"))
+    {
+        var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
 
+        try
+        {
+            var handler = new JwtSecurityTokenHandler();
+            if (handler.CanReadToken(token))
+            {
+                var jwtToken = handler.ReadJwtToken(token);
+                var payload = JsonSerializer.Serialize(jwtToken.Payload, new JsonSerializerOptions { WriteIndented = true });
+
+                Console.WriteLine($"JWT Token Payload: {payload}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid JWT token.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error decoding JWT: {ex.Message}");
+        }
+    }
+    await next();
+});
 // Optional: Automatically migrate database
 if (app.Configuration.GetValue<bool>("Migrate"))
 {
@@ -152,16 +179,28 @@ if (app.Configuration.GetValue<bool>("Migrate"))
     dbContext.Database.Migrate();
 }
 
-// Middleware pipeline
+// Swagger should be accessible without authentication
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "JWTToken_Auth_API V1"));
+
+// HTTPS redirection
 app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
+
+// Routing
+app.UseRouting();
+
+// CORS must be placed before authentication and authorization
 app.UseCors("TurnPoinTalentiTypePolicy");
+
+// Authentication and Authorization
+app.UseAuthentication(); // Adds the Authentication middleware
+app.UseAuthorization(); // Adds the Authorization middleware
+
+// Map controllers
 app.MapControllers();
 
-// Make sure to flush and close log files before application exits
+// Ensure logs are flushed when the application stops
 app.Lifetime.ApplicationStopping.Register(() => Log.CloseAndFlush());
 
+// Run the application
 app.Run();

@@ -1,0 +1,70 @@
+2024-12-25 11:14:53.248 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-25 11:14:53.881 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-25 11:14:53.889 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-25 11:14:53.890 +03:00 [INF] Hosting environment: Development
+2024-12-25 11:14:53.890 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-25 11:14:55.460 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-25 11:14:55.947 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-25 11:14:56.161 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 404 0 null 735.7874ms
+2024-12-25 11:14:56.166 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/swagger/index.html, Response status code: 404
+2024-12-25 11:17:57.078 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-25 11:17:57.106 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 404 0 null 28.5921ms
+2024-12-25 11:17:57.106 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/swagger/index.html, Response status code: 404
+2024-12-25 11:18:00.954 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-25 11:18:00.974 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 404 0 null 18.679ms
+2024-12-25 11:18:00.975 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5148/swagger/index.html, Response status code: 404
+2024-12-25 11:18:42.468 +03:00 [INF] User profile is available. Using 'C:\Users\z.saad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-25 11:18:43.075 +03:00 [INF] Now listening on: http://localhost:5148
+2024-12-25 11:18:43.082 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-25 11:18:43.083 +03:00 [INF] Hosting environment: Development
+2024-12-25 11:18:43.083 +03:00 [INF] Content root path: C:\Projects\Priv\Talenti\TurnPoint.jo.Talenti.FullApp\TurnPoint.Jo.Talenti\TurnPoint.Jo.APIs
+2024-12-25 11:18:57.601 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/index.html - null null
+2024-12-25 11:18:58.158 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/index.html - 200 null text/html;charset=utf-8 567.3238ms
+2024-12-25 11:18:58.212 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-25 11:18:58.217 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.6364ms
+2024-12-25 11:18:58.252 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/_vs/browserLink - null null
+2024-12-25 11:18:58.331 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.6972ms
+2024-12-25 11:18:58.474 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - null null
+2024-12-25 11:18:58.583 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5148/swagger/favicon-32x32.png - null null
+2024-12-25 11:18:58.616 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-25 11:18:58.616 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/favicon-32x32.png - 200 628 image/png 33.4299ms
+2024-12-25 11:18:58.881 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 406.3977ms
+2024-12-25 08:25:45.691 +00:00 [WRN] Storing keys in a directory '/home/app/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2024-12-25 08:25:45.848 +00:00 [INF] User profile is available. Using '/home/app/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-25 08:25:45.916 +00:00 [INF] Creating key {44876d7a-76f5-40dd-a301-d8c16b6eea41} with creation date 2024-12-25 08:25:45Z, activation date 2024-12-25 08:25:45Z, and expiration date 2025-03-25 08:25:45Z.
+2024-12-25 08:25:45.950 +00:00 [WRN] No XML encryptor configured. Key {44876d7a-76f5-40dd-a301-d8c16b6eea41} may be persisted to storage in unencrypted form.
+2024-12-25 08:25:45.963 +00:00 [INF] Writing data to file '/home/app/.aspnet/DataProtection-Keys/key-44876d7a-76f5-40dd-a301-d8c16b6eea41.xml'.
+2024-12-25 08:25:46.270 +00:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-12-25 08:38:32.499 +00:00 [WRN] Storing keys in a directory '/home/app/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2024-12-25 08:38:32.580 +00:00 [INF] User profile is available. Using '/home/app/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-25 08:38:32.614 +00:00 [INF] Creating key {3cd4dd91-08db-4f8f-9a2c-9ac654391974} with creation date 2024-12-25 08:38:32Z, activation date 2024-12-25 08:38:32Z, and expiration date 2025-03-25 08:38:32Z.
+2024-12-25 08:38:32.637 +00:00 [WRN] No XML encryptor configured. Key {3cd4dd91-08db-4f8f-9a2c-9ac654391974} may be persisted to storage in unencrypted form.
+2024-12-25 08:38:32.645 +00:00 [INF] Writing data to file '/home/app/.aspnet/DataProtection-Keys/key-3cd4dd91-08db-4f8f-9a2c-9ac654391974.xml'.
+2024-12-25 08:38:32.814 +00:00 [INF] Now listening on: http://[::]:8080
+2024-12-25 08:38:32.820 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-25 08:38:32.822 +00:00 [INF] Hosting environment: Development
+2024-12-25 08:38:32.823 +00:00 [INF] Content root path: /app
+2024-12-25 08:40:27.823 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:32774/ - null null
+2024-12-25 08:40:27.919 +00:00 [WRN] Failed to determine the https port for redirect.
+2024-12-25 08:40:28.043 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:32774/ - 404 0 null 221.5753ms
+2024-12-25 08:40:28.052 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:32774/, Response status code: 404
+2024-12-25 09:29:59.812 +00:00 [WRN] Storing keys in a directory '/home/app/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2024-12-25 09:29:59.881 +00:00 [INF] User profile is available. Using '/home/app/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-25 09:29:59.915 +00:00 [INF] Creating key {bb0ead3b-503f-4365-88bf-f9007372e227} with creation date 2024-12-25 09:29:59Z, activation date 2024-12-25 09:29:59Z, and expiration date 2025-03-25 09:29:59Z.
+2024-12-25 09:29:59.936 +00:00 [WRN] No XML encryptor configured. Key {bb0ead3b-503f-4365-88bf-f9007372e227} may be persisted to storage in unencrypted form.
+2024-12-25 09:29:59.944 +00:00 [INF] Writing data to file '/home/app/.aspnet/DataProtection-Keys/key-bb0ead3b-503f-4365-88bf-f9007372e227.xml'.
+2024-12-25 09:30:00.124 +00:00 [INF] Now listening on: http://[::]:8080
+2024-12-25 09:30:00.128 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-25 09:30:00.130 +00:00 [INF] Hosting environment: Development
+2024-12-25 09:30:00.130 +00:00 [INF] Content root path: /app

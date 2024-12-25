@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TernPoint.Jo.Talenti.DatabaseManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f3537b7cddbe6bb71fe5969350f780e52da684b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2b052bd77d7855663c4a36d837c128778313262")]
 [assembly: System.Reflection.AssemblyProductAttribute("TernPoint.Jo.Talenti.DatabaseManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TernPoint.Jo.Talenti.DatabaseManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

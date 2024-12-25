@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using TurnPoint.Jo.APIs.Common.ProfileDtos;
 using TurnPoint.Jo.APIs.Entities;
 using TurnPoint.Jo.APIs.Interfaceses;
