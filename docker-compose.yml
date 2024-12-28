@@ -1,29 +1,55 @@
 version: '3.8'
 
+networks:
+  talenti_network:
+    driver: bridge
+
 services:
-  api:
+  talentiapi:
     build:
-      context: ./turnpoint.jo.talenti  # Ensure this includes all project files
+      context: ./turnpoint.jo.talenti  
       dockerfile: TurnPoint.Jo.APIs/Dockerfile
-     # The Dockerfile inside the context directory
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ConnectionStrings__DefaultConnection=Server=db;Database=YourDatabaseName;User=sa;Password=P@ssword;TrustServerCertificate=True;
+      - ConnectionStrings__DefaultConnection=Server=talentidatabase;Database=TurnPoint.Jo.Talenti.Production;User Id=sa;Password=StrongP@ssw0rd!;TrustServerCertificate=True;
     ports:
       - "8080:8080"
     depends_on:
-      - db
+      dbmigrator:
+        condition: service_completed_successfully
+    networks:
+      - talenti_network
 
-  db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: sql_server
+  dbmigrator:
+    build:
+      context: ./turnpoint.jo.talenti
+      dockerfile: TernPoint.Jo.Talenti.DatabaseManager/Dockerfile.migrations
     environment:
-      SA_PASSWORD: "P@ssword"
-      ACCEPT_EULA: "Y"
+      - ConnectionStrings__DefaultConnection=Server=talentidatabase;Database=TurnPoint.Jo.Talenti.Production;User Id=sa;Password=StrongP@ssw0rd!;TrustServerCertificate=True;
+    depends_on:
+      talentidatabase:
+        condition: service_healthy
+    networks:
+      - talenti_network
+
+  talentidatabase:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=StrongP@ssw0rd!
+      - MSSQL_PID=Express
     ports:
-      - "1433:1433"
+      - "1533:1433"
+    container_name: talenti_sql_server
     volumes:
       - sql_data:/var/opt/mssql
+    networks:
+      - talenti_network
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "StrongP@ssw0rd!" -Q "SELECT 1" -b -o /dev/null
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   sql_data:

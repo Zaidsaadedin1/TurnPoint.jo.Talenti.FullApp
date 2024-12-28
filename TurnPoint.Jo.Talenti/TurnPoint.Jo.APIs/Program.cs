@@ -179,7 +179,7 @@ if (app.Configuration.GetValue<bool>("Migrate"))
     dbContext.Database.Migrate();
 }
 
-// Swagger should be accessible without authentication
+
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "JWTToken_Auth_API V1"));
 

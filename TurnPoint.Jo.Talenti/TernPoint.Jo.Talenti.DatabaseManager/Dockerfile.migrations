@@ -1,0 +1,24 @@
+# Dockerfile.migrations
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+WORKDIR /src
+
+# Copy the necessary project files
+COPY ["TernPoint.Jo.Talenti.DatabaseManager/TernPoint.Jo.Talenti.DatabaseManager.csproj", "TernPoint.Jo.Talenti.DatabaseManager/"]
+COPY ["TurnPoint.Jo.APIs/TurnPoint.Jo.APIs.csproj", "TurnPoint.Jo.APIs/"]
+COPY ["TurnPoint.Jo.Talenti.SharedModels/TurnPoint.Jo.Talenti.SharedModels.csproj", "TurnPoint.Jo.Talenti.SharedModels/"]
+
+# Restore dependencies
+RUN dotnet restore "TernPoint.Jo.Talenti.DatabaseManager/TernPoint.Jo.Talenti.DatabaseManager.csproj"
+
+# Copy the rest of the source code
+COPY . .
+
+# Create migration script
+RUN echo '#!/bin/bash\n\
+dotnet ef database update --project TernPoint.Jo.Talenti.DatabaseManager --startup-project TurnPoint.Jo.APIs\n\
+' > /src/migrate.sh
+
+RUN chmod +x /src/migrate.sh
+
+ENTRYPOINT ["/src/migrate.sh"]
